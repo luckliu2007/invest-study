@@ -121,6 +121,21 @@ print(weights)
 
 ## 6️⃣ 推荐学习资源（完整列表）
 
+### 6.6 全球顶级投资专家与公开学习资源
+| 专家 | 领域 | 关键资源 | 链接 |
+|------|------|----------|------|
+| **Warren Buffett** | 价值投资 | 股东信、年度致股东信、伯克希尔·哈撒韦年报 | https://www.berkshirehathaway.com/letters/letters.html |
+| **Charlie Munger** | 多元思维、价值投资 | 《穷查理宝典》演讲稿、Munger笔记 | https://mungerlibrary.com/ |
+| **Ray Dalio** | 宏观、桥水全局宏观模型 | 《原则》《大债务危机》、Bridgewater 公开信 | https://www.principles.com/ |
+| **Howard Marks** | 债券、风险周期 | 《备忘录》系列（Marks Notes） | https://www.oaktreecapital.com/insights/memos |
+| **Peter Lynch** | 成长投资 | 《One Up On Wall Street》演讲视频 | https://www.youtube.com/watch?v=UVD1o8B6Ftc |
+| **Joel Greenblatt** | 价值+质量模型 | 《The Little Book That Beats the Market》、Magic Formula 讲义 | https://www.gurufocus.com/blog/1199/magic-formula 
+| **David Swensen** | 资产配置 | 《Pioneering Portfolio Theory》、Yale Endowment 案例 | https://www.yale.edu/finance/ |
+| **Michael Burry** | 价值、宏观对冲 | 2020 年《Scion Capital》报告 | https://www.sec.gov/edgar/browse/?CIK=0001431102 |
+| **Catherine Wood** (ARK) | 创新、科技主题 | ARK 投研报告、Weekly Newsletter | https://ark-invest.com/research/ |
+| **Jack Bogle** | 被动指数投资 | Vanguard 公开文档、《Common Sense on Mutual Funds》 | https://investor.vanguard.com/education 
+
+
 ### 6.1 代码仓库（已在 `README.md` ）
 - `firmai/financial-machine-learning`
 - `stefan-jansen/machine-learning-for-trading`
