@@ -23,7 +23,7 @@
 | 7 | bt | 组合回测框架 | https://github.com/pmorissette/bt |
 | 8 | yfinance | 行情/财报抓取 | https://github.com/ranaroussi/yfinance |
 | 9 | quantstats | 绩效/风险分析 | https://github.com/ranaroussi/quantstats |
-| 10 | financetoolkit | 财务+估值工具 | https://github.com/joshyattridge/financetoolkit |
+| 10 | FinanceToolkit | 财务+估值工具 | https://github.com/JerBouma/FinanceToolkit |
 | 11 | mplfinance | K线图表 | https://github.com/matplotlib/mplfinance |
 | 12 | 量化投资学习(中文) | 中文因子/回测笔记 | https://github.com/CatsJuice/quantitative-investment-learning |
 
@@ -35,8 +35,9 @@ invest-study/
 ├─ README.md                     # 本文件：导航 + 资源总览
 ├─ FULL_LEARNING_PATH.md        # 完整学习路径（8 章）
 ├─ TOP_RESOURCES_2026.md        # 全网精选资源（2026）
-├─ requirements.txt             # Python 依赖
-├─ scripts/                     # 可运行脚本
+├─ requirements.txt             # 完整学习环境依赖
+├─ requirements-ci.txt          # CI 冒烟测试最小依赖
+├─ scripts/                     # 可运行脚本（结果输出到 reports/）
 │  ├─ sector_screening.py       # 赛道/因子筛选
 │  ├─ optimize_portfolio.py     # 组合优化（最小波动/最大夏普）
 │  └─ fund_raise_tracker.py     # 募集进度跟踪(xlsx)
@@ -46,16 +47,16 @@ invest-study/
 │  ├─ partnership_agreement_template.md
 │  ├─ ai_finance_playbook.md
 │  └─ enneagram_learning_guide.md   # （个人发展，与投研无关，保留）
-├─ .github/workflows/backtest.yml    # 每日回测 CI
-├─ notebooks/  data/  reports/  legal/  presentations/  # 学习产物目录
+├─ .github/workflows/backtest.yml    # 每日回测 CI（产物存 artifact）
+├─ notebooks/  data/  reports/       # 学习产物目录
 ```
 
 ## 🚀 快速开始
 ```bash
-pip install -r requirements.txt
-python scripts/sector_screening.py      # 跑筛选
-python scripts/optimize_portfolio.py    # 跑组合优化
-python scripts/fund_raise_tracker.py    # 生成募集跟踪表
+pip install -r requirements.txt         # 完整环境（或只装 requirements-ci.txt 快速体验）
+python scripts/sector_screening.py      # 跑筛选 → reports/sector_screening.csv
+python scripts/optimize_portfolio.py    # 跑组合优化 → reports/portfolio_weights.csv
+python scripts/fund_raise_tracker.py    # 生成募集跟踪表 → reports/fund_raise_tracker.xlsx
 ```
 
 ## 🤝 贡献

@@ -49,7 +49,7 @@
 |------|------|-----------|
 | **AkShare** | 国内 A 股、行业、宏观数据 | `akshare` |
 | **yfinance / OpenBB** | 海外行情、财报、研报 | `ranaroussi/yfinance` / `OpenBB-finance/OpenBB` |
-| **financetoolkit** | 财务+估值一体化 | `joshyattridge/financetoolkit` |
+| **FinanceToolkit** | 财务+估值一体化 | `JerBouma/FinanceToolkit` |
 | **pybroker / Lean** | 多因子与回测框架 | `edtechre/pybroker` / `QuantConnect/Lean` |
 | **SQL/BigQuery** | 大数据批量筛选 | pybroker SQL 示例 |
 
@@ -107,7 +107,7 @@ print(ef.clean_weights())
 - `QuantConnect/Lean`
 - `pmorissette/bt`
 - `ranaroussi/yfinance` / `quantstats`
-- `joshyattridge/financetoolkit`
+- `JerBouma/FinanceToolkit`
 - `matplotlib/mplfinance`
 - `CatsJuice/quantitative-investment-learning`（中文）
 
@@ -132,10 +132,9 @@ print(ef.clean_weights())
 | 平台 | 课程 | 链接 |
 |------|------|------|
 | Coursera | Investment Management (Geneva) | https://www.coursera.org/learn/investment-management |
-| edX | Machine Learning for Trading (Georgia Tech) | https://www.edx.org/course/machine-learning-for-trading |
-| CFA Institute | Investment Foundations（免费） | https://www.cfainstitute.org/en/programs/investment-foundations |
+| Coursera | Machine Learning for Trading 专项 (NYIF & Google Cloud) | https://www.coursera.org/specializations/machine-learning-trading |
+| CFA Institute | Investment Foundations（免费） | https://www.cfainstitute.org/programs/investment-foundations-certificate |
 | Class Central | 最佳投资课程榜单 | https://www.classcentral.com/report/best-investment-courses/ |
-| Investopedia | 最佳投资课程 | https://www.investopedia.com/the-best-investing-courses-11705367 |
 
 ### 6.4 博客 / 资讯
 | 名称 | 方向 | 链接 |
@@ -155,14 +154,14 @@ print(ef.clean_weights())
 | 专家 | 领域 | 关键资源 |
 |------|------|----------|
 | Warren Buffett | 价值投资 | 股东信 https://www.berkshirehathaway.com/letters/letters.html |
-| Charlie Munger | 多元思维 | https://mungerlibrary.com/ |
+| Charlie Munger | 多元思维 | 《穷查理宝典》在线版 https://www.stripe.press/poor-charlies-almanack |
 | Ray Dalio | 宏观 | 《原则》https://www.principles.com/ |
 | Howard Marks | 债券/周期 | 备忘录 https://www.oaktreecapital.com/insights/memos |
 | Peter Lynch | 成长 | https://www.youtube.com/watch?v=UVD1o8B6Ftc |
 | Joel Greenblatt | 价值+质量 | Magic Formula https://www.gurufocus.com/ |
 | David Swensen | 资产配置 | Yale Endowment |
 | Catherine Wood (ARK) | 创新 | https://ark-invest.com/research/ |
-| Jack Bogle | 指数 | https://investor.vanguard.com/education |
+| Jack Bogle | 指数 | https://investor.vanguard.com/investor-resources-education |
 
 ### 6.7 🤖 AI / LLM 投研新风（2026 新增）
 - 用法与工程要点见 `docs/ai_finance_playbook.md`
@@ -214,7 +213,7 @@ invest-study/
 ├─ scripts/   (sector_screening / optimize_portfolio / fund_raise_tracker)
 ├─ docs/      (fund_setup_checklist / PPM_template / partnership_agreement / ai_finance_playbook)
 ├─ .github/workflows/backtest.yml
-└─ notebooks/ data/ reports/ legal/ presentations/
+└─ notebooks/ data/ reports/   # 学习产物目录
 ```
 
 ## ✅ 接下来可以做的事

@@ -1,15 +1,23 @@
 """
-基金募集进度跟踪器 v2026
+基金募集进度跟踪器 v2026.1
 生成 xlsx：LP 名单、承诺金额、已实缴、进度%。
 依赖：openpyxl
 """
+import os
+import sys
+
 from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill
+
+# Windows 控制台默认非 UTF-8，中文输出会 UnicodeEncodeError
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 OUT = "reports/fund_raise_tracker.xlsx"
 
 
 def build():
+    os.makedirs(os.path.dirname(OUT), exist_ok=True)
     wb = Workbook()
     ws = wb.active
     ws.title = "募集进度"

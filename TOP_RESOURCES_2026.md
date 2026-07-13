@@ -15,7 +15,7 @@
 | bt | 灵活组合回测框架(Python) | https://github.com/pmorissette/bt |
 | yfinance | Yahoo 财经行情/财报抓取 | https://github.com/ranaroussi/yfinance |
 | quantstats | 组合绩效与风险分析 | https://github.com/ranaroussi/quantstats |
-| financetoolkit | 财务数据+估值一体化工具 | https://github.com/joshyattridge/financetoolkit |
+| FinanceToolkit | 财务数据+估值一体化工具 | https://github.com/JerBouma/FinanceToolkit |
 | mplfinance | K线/金融图表绘制 | https://github.com/matplotlib/mplfinance |
 | 量化投资学习(中文) | 因子/回测中文笔记 | https://github.com/CatsJuice/quantitative-investment-learning |
 
@@ -46,10 +46,9 @@
 | 课程 | 平台 | 链接 |
 |------|------|------|
 | Investment Management | Coursera (Geneva) | https://www.coursera.org/learn/investment-management |
-| Machine Learning for Trading | edX (Georgia Tech) | https://www.edx.org/course/machine-learning-for-trading |
-| Investment Foundations | CFA Institute（免费） | https://www.cfainstitute.org/en/programs/investment-foundations |
+| Machine Learning for Trading 专项 | Coursera (NYIF & Google Cloud) | https://www.coursera.org/specializations/machine-learning-trading |
+| Investment Foundations | CFA Institute（免费） | https://www.cfainstitute.org/programs/investment-foundations-certificate |
 | 最佳投资课程榜单 | Class Central | https://www.classcentral.com/report/best-investment-courses/ |
-| 最佳投资课程 | Investopedia | https://www.investopedia.com/the-best-investing-courses-11705367 |
 
 ## 四、📊 数据来源（免费/低成本）
 - **A股**：akshare、baostock、tushare(需token)
@@ -59,17 +58,18 @@
 
 ## 五、🧠 大师公开资源
 - Buffett 股东信：https://www.berkshirehathaway.com/letters/letters.html
-- Munger 档案：https://mungerlibrary.com/
+- Munger《穷查理宝典》在线版：https://www.stripe.press/poor-charlies-almanack
+- Buffett/Munger 股东大会视频档案：https://buffett.cnbc.com/
 - Dalio《原则》：https://www.principles.com/
 - Marks 备忘录：https://www.oaktreecapital.com/insights/memos
 - Greenblatt Magic Formula：https://www.gurufocus.com/
 - ARK 研究：https://ark-invest.com/research/
-- Bogle/Vanguard：https://investor.vanguard.com/education
+- Bogle/Vanguard：https://investor.vanguard.com/investor-resources-education 与 https://boglecenter.net/
 
 ## 六、📰 博客 / 资讯 / 播客 / 简报
 - QuantStart（量化教学）：https://www.quantstart.com
 - Alpha Architect（因子研究）：https://alphaarchitect.com
-- Flirting with Models（Research Affiliates）：https://www.thinknewfound.com
+- Flirting with Models（Newfound Research）：https://www.thinknewfound.com
 - 集思录（中文固收/套利）：https://www.jisilu.cn
 - Seeking Alpha：https://seekingalpha.com
 - 机器之心（AI前沿）：https://www.jiqizhixin.com
