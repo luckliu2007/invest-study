@@ -30,8 +30,8 @@
 | 2.1 设立基金公司 | 备案、备案材料、合规审计 | `docs/fund_setup_checklist.md` |
 | 2.2 编写基金募集说明书（PPM） | 投资策略、风险揭示、费用结构 | `docs/PPM_template.md` |
 | 2.3 合伙协议 & 法律文件 | GP/LP 权责、收益分配、退出机制 | `docs/partnership_agreement_template.md` |
-| 2.4 募集 & 投资者关系 | CRM、路演 PPT、投资者问答库 | `presentations/roadshow.pptx` |
-| 2.5 监管报送 & 报告 | 月度/季报、审计报告、税务申报 | `reports/quarterly_report_template.md` |
+| 2.4 募集 & 投资者关系 | CRM、路演 PPT、投资者问答库 | 练习产出：`presentations/roadshow.pptx`（自建） |
+| 2.5 监管报送 & 报告 | 月度/季报、审计报告、税务申报 | 练习产出：`reports/quarterly_report_template.md`（自建） |
 
 **实战练习**
 1. 用 **Markdown** 完成一份 **《模拟私募基金募集说明书》**（约 5 页），提交到 `docs/`。
@@ -72,7 +72,7 @@ target = stock_df[stock_df['行业'].str.contains('新能源车')]
 | 4.2 资产配置优化 | 均值‑方差、风险平价、黑利特 | `pyportfolioopt` |
 | 4.3 组合回测 | Backtrader、Zipline、bt、vectorbt | `scripts/optimize_portfolio.py`（已提供） |
 | 4.4 风险监控 | VaR、最大回撤、行业敞口 | quantstats / ffn |
-| 4.5 投后报告 | 周报、月报、投资回报分析 | `reports/portfolio_report_template.md` |
+| 4.5 投后报告 | 周报、月报、投资回报分析 | 练习产出：`reports/portfolio_report_template.md`（自建） |
 
 **示例：使用 `pyportfolioopt` 进行最小波动率组合**
 ```python
@@ -94,7 +94,7 @@ print(ef.clean_weights())
 | 5.3 退出评估 | IPO、并购、二级市场套现 | DCF、相对估值 |
 | 5.4 合规审计 | 合规审查、税务优化 | 法务模板、审计清单 |
 
-**练手项目**：在 `scripts/exit_simulation.py` 中实现 **并购溢价模拟器**（输入估值、溢价比例，输出 IRR）。
+**已提供脚本**：`scripts/exit_simulation.py` 实现了**并购/退出溢价模拟器**（输入估值、溢价比例、持有年限与期间现金流，输出 IRR、MOIC、年化收益）。运行：`python scripts/exit_simulation.py`。
 
 ## 6️⃣ 推荐学习资源（完整列表）
 

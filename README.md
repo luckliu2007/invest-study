@@ -1,5 +1,10 @@
 # invest-study 📈
 
+[![CI](https://github.com/luckliu2007/invest-study/actions/workflows/backtest.yml/badge.svg)](https://github.com/luckliu2007/invest-study/actions/workflows/backtest.yml)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/)
+[![Tests](https://img.shields.io/badge/tests-pytest-green.svg)](./tests)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+
 > 投资研究 / 量化 / 基金实务的**系统性自学与团队培训仓库**。
 > 由交易分析团队基于公开资料持续维护，融合基本面、技术面、量化与 AI 投研新风。
 
@@ -8,8 +13,9 @@
 - 🌟 **全网精选资源(2026)**：[`TOP_RESOURCES_2026.md`](./TOP_RESOURCES_2026.md)（课程/书/数据/大师/AI）
 - 🤖 **AI 投研手册**：[`docs/ai_finance_playbook.md`](./docs/ai_finance_playbook.md)
 - 📋 **基金实务模板**：[`docs/`](./docs)（设立清单 / PPM / 合伙协议）
-- 🛠️ **可运行脚本**：[`scripts/`](./scripts)（筛选 / 组合优化 / 募集跟踪）
-- 🔧 **自动化 CI**：[`.github/workflows/backtest.yml`](./.github/workflows/backtest.yml)
+- 🛠️ **可运行脚本**：[`scripts/`](./scripts)（筛选 / 组合优化 / 募集跟踪 / 退出模拟）
+- ✅ **单元测试**：[`tests/`](./tests)（`pytest`，覆盖脚本核心逻辑与降级路径）
+- 🔧 **自动化 CI**：[`.github/workflows/backtest.yml`](./.github/workflows/backtest.yml)（test + smoke 两段式）
 
 ## 🗂️ 资源总览（GitHub 开源项目）
 | # | 项目 | 简介 | 链接 |
@@ -40,7 +46,9 @@ invest-study/
 ├─ scripts/                     # 可运行脚本（结果输出到 reports/）
 │  ├─ sector_screening.py       # 赛道/因子筛选
 │  ├─ optimize_portfolio.py     # 组合优化（最小波动/最大夏普）
-│  └─ fund_raise_tracker.py     # 募集进度跟踪(xlsx)
+│  ├─ fund_raise_tracker.py     # 募集进度跟踪(xlsx)
+│  └─ exit_simulation.py        # 退出/并购溢价 IRR 模拟
+├─ tests/                       # pytest 单元测试（覆盖降级路径）
 ├─ docs/                        # 模板与手册
 │  ├─ fund_setup_checklist.md
 │  ├─ PPM_template.md
@@ -57,6 +65,16 @@ pip install -r requirements.txt         # 完整环境（或只装 requirements-
 python scripts/sector_screening.py      # 跑筛选 → reports/sector_screening.csv
 python scripts/optimize_portfolio.py    # 跑组合优化 → reports/portfolio_weights.csv
 python scripts/fund_raise_tracker.py    # 生成募集跟踪表 → reports/fund_raise_tracker.xlsx
+python scripts/exit_simulation.py       # 退出溢价 IRR 模拟 → reports/exit_simulation.csv
+```
+
+> 所有脚本在无网络 / 缺少可选依赖时会自动降级为内置示例数据，保证流程可跑通。
+
+## ✅ 运行测试
+
+```bash
+pip install -r requirements-test.txt    # 轻量测试依赖
+pytest                                   # 运行全部单元测试
 ```
 
 ## 🤝 贡献
