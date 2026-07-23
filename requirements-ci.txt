@@ -1,8 +1,8 @@
 # CI 冒烟测试用的最小依赖（完整学习环境见 requirements.txt）
 # packaging：pyportfolioopt 的依赖 scikit-base 运行时需要但未声明，需显式安装
 packaging>=23
-pandas>=2.0
-numpy>=1.24
-akshare>=1.12
-pyportfolioopt>=1.5
+pandas>=2.2
+numpy>=1.26,<2.0
+akshare>=1.14
+pyportfolioopt>=1.5.5
 openpyxl>=3.1
