@@ -31,7 +31,7 @@
 | 9 | quantstats | 绩效/风险分析 | https://github.com/ranaroussi/quantstats |
 | 10 | FinanceToolkit | 财务+估值工具 | https://github.com/JerBouma/FinanceToolkit |
 | 11 | mplfinance | K线图表 | https://github.com/matplotlib/mplfinance |
-| 12 | 量化投资学习(中文) | 中文因子/回测笔记 | https://github.com/CatsJuice/quantitative-investment-learning |
+| 12 | Qlib | 微软 AI 量化平台（因子/模型/回测，支持 A 股） | https://github.com/microsoft/qlib |
 
 > 更多课程/书单/数据/大师资源见 [`TOP_RESOURCES_2026.md`](./TOP_RESOURCES_2026.md)。
 

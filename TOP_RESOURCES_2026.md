@@ -17,7 +17,7 @@
 | quantstats | 组合绩效与风险分析 | https://github.com/ranaroussi/quantstats |
 | FinanceToolkit | 财务数据+估值一体化工具 | https://github.com/JerBouma/FinanceToolkit |
 | mplfinance | K线/金融图表绘制 | https://github.com/matplotlib/mplfinance |
-| 量化投资学习(中文) | 因子/回测中文笔记 | https://github.com/CatsJuice/quantitative-investment-learning |
+| Qlib | 微软 AI 量化平台：因子挖掘→模型→回测，支持 A 股 | https://github.com/microsoft/qlib |
 
 ## 二、📚 经典书单（入门→进阶）
 **价值/基本面**
@@ -79,7 +79,11 @@
 ## 七、🤖 AI / LLM 投研新风（2026）
 - 金融分析 LLM 评测：https://www.azilen.com/learning/best-llms-for-financial-analysis/
 - AI 投研工具指南：https://www.alpha-sense.com/resources/research-articles/ai-tools-for-financial-research/
-- FinBERT 情绪模型：https://github.com/ProsusAI/finbert
+- FinBERT 情绪模型：https://github.com/ProsusAI/finbert（2022 年后未更新，适合作为情绪分类基准）
+- TradingAgents 多智能体交易研究框架：https://github.com/TauricResearch/TradingAgents
+- ai-hedge-fund 多智能体投资分析教学项目：https://github.com/virattt/ai-hedge-fund
+- FinGPT 开源金融大模型：https://github.com/AI4Finance-Foundation/FinGPT
+- RD-Agent 自动化因子/模型研发（配合 Qlib）：https://github.com/microsoft/RD-Agent
 - 用法见 `docs/ai_finance_playbook.md`
 
 ## 八、📄 论文与研究

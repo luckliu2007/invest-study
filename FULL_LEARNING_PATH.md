@@ -109,7 +109,7 @@ print(ef.clean_weights())
 - `ranaroussi/yfinance` / `quantstats`
 - `JerBouma/FinanceToolkit`
 - `matplotlib/mplfinance`
-- `CatsJuice/quantitative-investment-learning`（中文）
+- `microsoft/qlib`（AI 量化平台，支持 A 股）
 
 ### 6.2 经典书籍（扩充）
 | 书名 | 作者 | 适用阶段 |
@@ -183,23 +183,25 @@ print(ef.clean_weights())
 ## 8️⃣ 自动化 & CI（可选）
 ```yaml
 # .github/workflows/backtest.yml（已提供）
-# 每天 01:00 UTC 自动跑筛选+组合优化+募集跟踪，产物作为 artifact
+# push/PR 时 + 每周一 01:00 UTC 跑单元测试和全部脚本，产物作为 artifact
 ```
 
 ## 9️⃣ AI 投研实战（新增章节）
 ### 9.1 四大场景
 | 场景 | 做法 | 工具 |
 |------|------|------|
-| 财报/公告摘要 | PDF → LLM 抽取指标与风险 | GPT-4.5 / Claude / Gemini |
+| 财报/公告摘要 | PDF → LLM 抽取指标与风险 | Claude / ChatGPT / Gemini / DeepSeek / 通义千问（用各家当前旗舰） |
 | 研报问答（RAG） | 研报库 → 向量索引 → 问答 | LlamaIndex / LangChain |
 | 新闻情绪监控 | 新闻流 → 情绪分 → 预警 | FinBERT / LLM |
-| 策略代码生成 | 自然语言 → 回测脚本 | Copilot / Cursor / Claude |
+| 策略代码生成 | 自然语言 → 回测脚本 | Claude Code / Codex / Cursor / Copilot 等 AI 编程智能体 |
 
 ### 9.2 推荐技术栈
 - 数据：`akshare` / `yfinance` / `OpenBB`
 - RAG：`LlamaIndex` / `LangChain` + `Chroma` / `FAISS`
 - 情绪：`FinBERT`
-- 生成：`Copilot` / `Claude`
+- 生成：AI 编程智能体（`Claude Code` / `Codex` / `Cursor`）
+- 智能体：`TradingAgents` / `ai-hedge-fund`（多智能体投研）、`RD-Agent` + `Qlib`（自动化因子研发）
+- 工具接入：MCP（Model Context Protocol）——把行情/财报数据源接进 AI 助手
 
 ### 9.3 入门练习
 1. OpenBB 拉一只股票财务 → LLM 写「一句话投资要点」
