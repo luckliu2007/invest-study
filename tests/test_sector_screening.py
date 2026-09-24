@@ -15,13 +15,16 @@ def test_sample_universe_has_required_columns():
 
 def test_screen_filters_by_industry_and_factors():
     # 使用内置示例数据（无 akshare 时的默认路径）
-    cands = ss.screen(industry="新能源车", roe_min=0.15, pe_max=20)
-    assert isinstance(cands, pd.DataFrame)
-    # 示例数据里比亚迪 roe=0.16 pe=18 满足；宁德 pe=28 不满足
-    assert (cands["industry"].str.contains("新能源车")).all()
-    if not cands.empty:
-        assert (cands["roe"] > 0.15).all()
-        assert (cands["pe"] < 20).all()
+    cands = ss.screen(industry="汽车整车", roe_min=0.15, pe_max=20)
+    # 示例数据里比亚迪（汽车整车）roe=0.16 pe=18 满足
+    assert list(cands["ticker"]) == ["002594"]
+    # 宁德时代（电池）pe=28 不满足
+    assert ss.screen(industry="电池", roe_min=0.15, pe_max=20).empty
+
+
+def test_default_industry_is_in_sample_data():
+    """默认板块名必须能命中示例数据，否则离线默认运行永远输出空表。"""
+    assert ss.INDUSTRY_KEYWORD in set(ss.sample_universe()["industry"])
 
 
 def test_screen_empty_when_industry_absent():

@@ -20,7 +20,7 @@ except Exception:
 
 import pandas as pd
 
-INDUSTRY_KEYWORD = "新能源车"  # 示例数据用；实盘请传东方财富行业板块名，如 "汽车整车"/"半导体"/"电池"
+INDUSTRY_KEYWORD = "汽车整车"  # 东方财富行业板块名，如 "半导体"/"电池"/"银行"/"酿酒行业"
 ROE_MIN = 0.15
 PE_MAX = 20
 OUT = "reports/sector_screening.csv"
@@ -36,7 +36,7 @@ def sample_universe():
     return pd.DataFrame({
         "ticker": ["600519", "000858", "300750", "002594", "600036"],
         "name": ["贵州茅台", "五粮液", "宁德时代", "比亚迪", "招商银行"],
-        "industry": ["白酒", "白酒", "新能源车", "新能源车", "银行"],
+        "industry": ["酿酒行业", "酿酒行业", "电池", "汽车整车", "银行"],
         "close": [1700, 150, 220, 260, 40],
         "roe": [0.30, 0.25, 0.18, 0.16, 0.17],
         "pe": [35, 25, 28, 18, 7],
