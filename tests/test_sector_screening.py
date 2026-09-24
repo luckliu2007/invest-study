@@ -36,20 +36,59 @@ def test_load_universe_falls_back_without_akshare(monkeypatch):
     assert ss.REQUIRED_COLS <= set(df.columns)
 
 
-def test_screen_without_factor_columns():
+def test_screen_without_factor_columns(monkeypatch):
     """行业列存在但缺 roe/pe 时应仅按行业过滤，不报错。"""
     fake = pd.DataFrame({
         "ticker": ["000001", "000002"],
         "name": ["A", "B"],
         "industry": ["新能源车", "银行"],
     })
-    # 通过 monkeypatch 让 load_universe 返回无因子列的数据
-    import pytest as _pytest  # noqa
-    orig = ss.load_universe
-    ss.load_universe = lambda: fake  # type: ignore
-    try:
-        cands = ss.screen(industry="新能源车")
-        assert len(cands) == 1
-        assert cands.iloc[0]["industry"] == "新能源车"
-    finally:
-        ss.load_universe = orig  # type: ignore
+    monkeypatch.setattr(ss, "load_universe", lambda *_: fake)
+    cands = ss.screen(industry="新能源车")
+    assert len(cands) == 1
+    assert cands.iloc[0]["industry"] == "新能源车"
+
+
+class _FakeAk:
+    """模拟东方财富行业成分股接口的返回字段（该接口不含 ROE）。"""
+
+    @staticmethod
+    def stock_board_industry_cons_em(symbol):
+        return pd.DataFrame({
+            "序号": [1, 2, 3],
+            "代码": ["002594", "601127", "600104"],
+            "名称": ["比亚迪", "赛力斯", "上汽集团"],
+            "最新价": [260.0, 90.0, 15.0],
+            "市盈率-动态": [18.5, "-", 9.2],  # "-" 代表亏损/无数据
+        })
+
+
+def test_load_universe_live_path_maps_eastmoney_columns(monkeypatch):
+    monkeypatch.setattr(ss, "HAVE_AK", True)
+    monkeypatch.setattr(ss, "ak", _FakeAk, raising=False)
+    monkeypatch.delenv("INVEST_OFFLINE", raising=False)
+    df = ss.load_universe("汽车整车")
+    assert ss.REQUIRED_COLS <= set(df.columns)
+    assert (df["industry"] == "汽车整车").all()
+    assert pd.isna(df.loc[df["ticker"] == "601127", "pe"]).all()
+
+
+def test_screen_live_path_filters_by_pe_only(monkeypatch):
+    monkeypatch.setattr(ss, "HAVE_AK", True)
+    monkeypatch.setattr(ss, "ak", _FakeAk, raising=False)
+    monkeypatch.delenv("INVEST_OFFLINE", raising=False)
+    cands = ss.screen(industry="汽车整车", pe_max=20)
+    # 无 ROE 列时只按 PE 过滤；PE 缺失的赛力斯被剔除
+    assert set(cands["ticker"]) == {"002594", "600104"}
+
+
+def test_offline_env_skips_network(monkeypatch):
+    class _Boom:
+        @staticmethod
+        def stock_board_industry_cons_em(symbol):
+            raise AssertionError("INVEST_OFFLINE 时不应联网")
+
+    monkeypatch.setattr(ss, "HAVE_AK", True)
+    monkeypatch.setattr(ss, "ak", _Boom, raising=False)
+    monkeypatch.setenv("INVEST_OFFLINE", "1")
+    assert ss.REQUIRED_COLS <= set(ss.load_universe().columns)

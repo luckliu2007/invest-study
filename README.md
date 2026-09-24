@@ -55,20 +55,21 @@ invest-study/
 │  ├─ partnership_agreement_template.md
 │  ├─ ai_finance_playbook.md
 │  └─ enneagram_learning_guide.md   # （个人发展，与投研无关，保留）
-├─ .github/workflows/backtest.yml    # 每日回测 CI（产物存 artifact）
+├─ .github/workflows/backtest.yml    # CI：push/PR + 每周一巡检（产物存 artifact）
 ├─ notebooks/  data/  reports/       # 学习产物目录
 ```
 
 ## 🚀 快速开始
 ```bash
 pip install -r requirements.txt         # 完整环境（或只装 requirements-ci.txt 快速体验）
-python scripts/sector_screening.py      # 跑筛选 → reports/sector_screening.csv
+python scripts/sector_screening.py 汽车整车   # 按东方财富行业板块筛选 → reports/sector_screening.csv
 python scripts/optimize_portfolio.py    # 跑组合优化 → reports/portfolio_weights.csv
 python scripts/fund_raise_tracker.py    # 生成募集跟踪表 → reports/fund_raise_tracker.xlsx
 python scripts/exit_simulation.py       # 退出溢价 IRR 模拟 → reports/exit_simulation.csv
 ```
 
 > 所有脚本在无网络 / 缺少可选依赖时会自动降级为内置示例数据，保证流程可跑通。
+> 行业筛选的实盘数据来自东方财富行业板块接口，通常只在国内网络可访问；设置 `INVEST_OFFLINE=1` 可直接用示例数据。
 
 ## ✅ 运行测试
 
