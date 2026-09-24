@@ -79,7 +79,7 @@
 ## 七、🤖 AI / LLM 投研新风（2026）
 - 金融分析 LLM 评测：https://www.azilen.com/learning/best-llms-for-financial-analysis/
 - AI 投研工具指南：https://www.alpha-sense.com/resources/research-articles/ai-tools-for-financial-research/
-- FinBERT 情绪模型：https://github.com/ProsusAI/finbert（2022 年后未更新，适合作为情绪分类基准）
+- FinBERT 情绪模型：https://github.com/ProsusAI/finbert （2022 年后未更新，适合作为情绪分类基准）
 - TradingAgents 多智能体交易研究框架：https://github.com/TauricResearch/TradingAgents
 - ai-hedge-fund 多智能体投资分析教学项目：https://github.com/virattt/ai-hedge-fund
 - FinGPT 开源金融大模型：https://github.com/AI4Finance-Foundation/FinGPT
