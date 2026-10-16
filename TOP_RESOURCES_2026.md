@@ -80,6 +80,8 @@
 - 金融分析 LLM 评测：https://www.azilen.com/learning/best-llms-for-financial-analysis/
 - AI 投研工具指南：https://www.alpha-sense.com/resources/research-articles/ai-tools-for-financial-research/
 - FinBERT 情绪模型：https://github.com/ProsusAI/finbert （2022 年后未更新，适合作为情绪分类基准）
+- Vibe-Trading 个人交易智能体工作台（支持 A 股/港股/美股/加密，含回测与 MCP）：https://github.com/HKUDS/Vibe-Trading
+- FinRobot 金融分析/研报生成智能体平台：https://github.com/AI4Finance-Foundation/FinRobot
 - TradingAgents 多智能体交易研究框架：https://github.com/TauricResearch/TradingAgents
 - ai-hedge-fund 多智能体投资分析教学项目：https://github.com/virattt/ai-hedge-fund
 - FinGPT 开源金融大模型：https://github.com/AI4Finance-Foundation/FinGPT
