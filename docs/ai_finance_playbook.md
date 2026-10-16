@@ -24,8 +24,10 @@
 
 | 项目 | 做什么 | 学习重点 |
 |------|--------|----------|
+| [Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) | 港大 HKUDS 出品的个人交易智能体工作台（2026 年开源，MIT）：多智能体研究、回测引擎、MCP 接口，覆盖 A 股、港股、美股、加密货币、期权 | 用自然语言驱动“研究→回测→复盘”全流程；⚠️ 官方声明从未发行任何代币，冒充项目方的币一律是骗局 |
 | [TradingAgents](https://github.com/TauricResearch/TradingAgents) | 模拟交易公司的多智能体框架：基本面/情绪/技术分析师 + 多空辩论 + 风控 | 多智能体分工与辩论机制 |
 | [ai-hedge-fund](https://github.com/virattt/ai-hedge-fund) | 多个“投资大师风格”智能体协作给出投资观点 | 把投资哲学写成智能体提示词 |
+| [FinRobot](https://github.com/AI4Finance-Foundation/FinRobot) | 面向金融分析的智能体平台，侧重自动生成股票研究报告 | 用智能体拆解“读财报→估值→写研报” |
 | [FinGPT](https://github.com/AI4Finance-Foundation/FinGPT) | 开源金融大模型与微调方案 | 金融领域微调、情绪分析基准 |
 | [RD-Agent](https://github.com/microsoft/RD-Agent) + [Qlib](https://github.com/microsoft/qlib) | 智能体自动提出因子假设 → 写代码 → 回测 → 迭代 | 自动化因子研发闭环 |
 
@@ -48,3 +50,4 @@
 2. 把 10 份年报 PDF 做 RAG，问「哪家公司毛利率最高」
 3. 用 FinBERT 和 LLM 分别对一周财经新闻打情绪分，对比两者差异并画趋势图
 4. 本地跑通 TradingAgents 或 ai-hedge-fund，读懂一次完整决策链路里每个智能体的输入输出
+5. 用 Vibe-Trading 对一只 A 股做一次“研究 → 回测 → 复盘”，再用本仓库 `scripts/` 的结果交叉验证

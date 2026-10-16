@@ -200,7 +200,7 @@ print(ef.clean_weights())
 - RAG：`LlamaIndex` / `LangChain` + `Chroma` / `FAISS`
 - 情绪：`FinBERT`
 - 生成：AI 编程智能体（`Claude Code` / `Codex` / `Cursor`）
-- 智能体：`TradingAgents` / `ai-hedge-fund`（多智能体投研）、`RD-Agent` + `Qlib`（自动化因子研发）
+- 智能体：`Vibe-Trading`（交易智能体工作台，支持 A 股）/ `TradingAgents` / `ai-hedge-fund`（多智能体投研）/ `FinRobot`（研报生成）、`RD-Agent` + `Qlib`（自动化因子研发）
 - 工具接入：MCP（Model Context Protocol）——把行情/财报数据源接进 AI 助手
 
 ### 9.3 入门练习
