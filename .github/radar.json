@@ -1,0 +1,10 @@
+{
+  "theme": "投资研究 / 量化 / AI 投研：回测、因子、组合优化、金融数据、交易智能体",
+  "self_owner": "luckliu2007",
+  "queries": ["topic:quantitative-finance", "topic:algorithmic-trading", "topic:backtesting", "topic:portfolio-optimization", "topic:trading-agents", "量化 in:description"],
+  "min_stars": 500,
+  "pushed_within_days": 30,
+  "max_age_days": 730,
+  "stale_days": 540,
+  "top_n": 8
+}
