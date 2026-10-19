@@ -54,6 +54,7 @@
 - **A股**：akshare、baostock、tushare(需token)
 - **全球**：yfinance、pandas-datareader、fredapi(宏观)、Alpha Vantage、Nasdaq Data Link(原Quandl)
 - **另类**：finagg(聚合多免费API)
+- **给 AI 编程助手用**：a-stock-data（A 股全栈数据 Skill 文件，聚合 34 个免费数据源：行情、研报、资金面、公告、宏观利率、期货、可转债等）：https://github.com/simonlin1212/a-stock-data
 - **研报/公告**：交易所官网、巨潮资讯、公司 IR 页
 
 ## 五、🧠 大师公开资源
@@ -83,6 +84,8 @@
 - Vibe-Trading 个人交易智能体工作台（支持 A 股/港股/美股/加密，含回测与 MCP）：https://github.com/HKUDS/Vibe-Trading
 - FinRobot 金融分析/研报生成智能体平台：https://github.com/AI4Finance-Foundation/FinRobot
 - TradingAgents 多智能体交易研究框架：https://github.com/TauricResearch/TradingAgents
+- TradingAgents-astock（TradingAgents 的 A 股特化 fork：A 股数据源、T+1/涨跌停规则，新增政策/游资/解禁分析师，面向研究与教学）：https://github.com/simonlin1212/TradingAgents-astock
+- daily_stock_analysis LLM 自选股每日分析与推送（A股/港股/美股等，GitHub Actions 定时运行，含回测；README 含赞助商推广链接）：https://github.com/ZhuLinsen/daily_stock_analysis
 - ai-hedge-fund 多智能体投资分析教学项目：https://github.com/virattt/ai-hedge-fund
 - FinGPT 开源金融大模型：https://github.com/AI4Finance-Foundation/FinGPT
 - RD-Agent 自动化因子/模型研发（配合 Qlib）：https://github.com/microsoft/RD-Agent
