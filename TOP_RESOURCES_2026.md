@@ -18,6 +18,7 @@
 | FinanceToolkit | 财务数据+估值一体化工具 | https://github.com/JerBouma/FinanceToolkit |
 | mplfinance | K线/金融图表绘制 | https://github.com/matplotlib/mplfinance |
 | Qlib | 微软 AI 量化平台：因子挖掘→模型→回测，支持 A 股 | https://github.com/microsoft/qlib |
+| AKQuant | AKShare 团队出品的回测/交易框架：Rust 内核 + Python 接口，内置滚动训练(Walk-forward) | https://github.com/akfamily/akquant |
 
 ## 二、📚 经典书单（入门→进阶）
 **价值/基本面**
