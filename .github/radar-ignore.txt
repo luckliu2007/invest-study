@@ -3,3 +3,5 @@ bojieli/ai-infra-book
 wbh604/UZI-Skill
 anbeime/skill
 OpenByteInc/QuantDinger
+chaitin/PandaWiki
+hello245m/free-stockdb
