@@ -144,7 +144,7 @@ print(ef.clean_weights())
 ### 6.4 博客 / 资讯
 | 名称 | 方向 | 链接 |
 |------|------|------|
-| QuantStart | 量化教学 | https://www.quantstart.com |
+| QuantStart | 量化教学（2026-10 起官网返回 502 无法访问，可读 [网络存档](https://web.archive.org/web/2026/https://www.quantstart.com/)） | https://www.quantstart.com |
 | Alpha Architect | 因子研究 | https://alphaarchitect.com |
 | Flirting with Models | 因子/配置 | https://www.thinknewfound.com |
 | 集思录 | 中文固收/套利 | https://www.jisilu.cn |

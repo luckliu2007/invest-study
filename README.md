@@ -53,8 +53,7 @@ invest-study/
 │  ├─ fund_setup_checklist.md
 │  ├─ PPM_template.md
 │  ├─ partnership_agreement_template.md
-│  ├─ ai_finance_playbook.md
-│  └─ enneagram_learning_guide.md   # （个人发展，与投研无关，保留）
+│  └─ ai_finance_playbook.md
 ├─ .github/workflows/backtest.yml    # CI：push/PR + 每周一巡检（产物存 artifact）
 ├─ notebooks/  data/  reports/       # 学习产物目录
 ```
