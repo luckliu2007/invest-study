@@ -92,6 +92,8 @@
 - ai-hedge-fund 多智能体投资分析教学项目：https://github.com/virattt/ai-hedge-fund
 - FinGPT 开源金融大模型：https://github.com/AI4Finance-Foundation/FinGPT
 - RD-Agent 自动化因子/模型研发（配合 Qlib）：https://github.com/microsoft/RD-Agent
+- Alpaca MCP Server（券商 Alpaca 官方 MCP 服务器：让 AI 助手查行情、管持仓、下单，覆盖美股/ETF/期权/加密；默认连模拟盘，改配置才会实盘）：https://github.com/alpacahq/alpaca-mcp-server
+- MaverickMCP（本地运行的股票分析 MCP 服务器：基于 yfinance，核心工具免 API Key，含技术指标、选股、持仓记录和可选 Python 回测；不下单，定位教学用途）：https://github.com/wshobson/maverick-mcp
 - 用法见 `docs/ai_finance_playbook.md`
 
 ## 八、📄 论文与研究
