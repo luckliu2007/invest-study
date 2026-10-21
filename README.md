@@ -78,6 +78,10 @@ pip install -r requirements-test.txt    # 轻量测试依赖
 pytest                                   # 运行全部单元测试
 ```
 
+## 路线图
+
+下一步的补强方向和维护机制见 [ROADMAP.md](ROADMAP.md)。
+
 ## 🤝 贡献
 欢迎 PR 补充资源、修正链接、提交练习 Notebook。
 
