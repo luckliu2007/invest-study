@@ -50,6 +50,10 @@
 | Investment Management | Coursera (Geneva) | https://www.coursera.org/learn/investment-management |
 | Machine Learning for Trading 专项 | Coursera (NYIF & Google Cloud) | https://www.coursera.org/specializations/machine-learning-trading |
 | Investment Foundations | CFA Institute（免费） | https://www.cfainstitute.org/programs/investment-foundations-certificate |
+| Financial Markets（Robert Shiller） | Coursera（耶鲁，可免费旁听） | https://www.coursera.org/learn/financial-markets-global |
+| 15.401 Finance Theory I | MIT OpenCourseWare（免费） | https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/ |
+| 18.S096 金融数学专题 | MIT OpenCourseWare（免费） | https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/ |
+| QuantEcon 讲义 | QuantEcon（免费，Python） | https://quantecon.org/lectures/ |
 | 最佳投资课程榜单 | Class Central | https://www.classcentral.com/report/best-investment-courses/ |
 
 ## 四、📊 数据来源（免费/低成本）
@@ -58,7 +62,9 @@
 - **另类**：finagg(聚合多免费API)
 - **给 AI 编程助手用**：a-stock-data（A 股全栈数据 Skill 文件，聚合 34 个免费数据源：行情、研报、资金面、公告、宏观利率、期货、可转债等）：https://github.com/simonlin1212/a-stock-data
 - **本地 A 股数据湖**：CNEquity（免注册、免 token，把行情/财报/资金面/公告/宏观等 55 个数据集增量采集为本地 Parquet，带质量审计与 PIT 语义，可经 MCP 接给 AI 助手；数据来自东财、新浪、BaoStock 等公开源，覆盖以其数据集目录为准）：https://github.com/rootSunc/CNEquity
-- **研报/公告**：交易所官网、巨潮资讯、公司 IR 页
+- **因子研究**：Kenneth French Data Library（Fama-French 因子与组合收益的权威免费数据，做因子回测的基准）：https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html
+- **研报/公告**：交易所官网、巨潮资讯（证监会指定信息披露网站）：http://www.cninfo.com.cn/ 、公司 IR 页
+- **免费研究专著**：CFA Institute Research Foundation（大量投资研究专著与文献综述可免费下载）：https://rpc.cfainstitute.org/research-foundation
 
 ## 五、🧠 大师公开资源
 - Buffett 股东信：https://www.berkshirehathaway.com/letters/letters.html

@@ -56,13 +56,14 @@
 ### 3.3 示例筛选流程（Python）
 ```python
 # 见 scripts/sector_screening.py（已提供，可直接运行，无网络时降级为示例数据）
+# 注意：ak.stock_zh_a_spot() 不含“行业”字段，要按行业筛选需用行业板块成分股接口
 import akshare as ak
 import pandas as pd
-stock_df = ak.stock_zh_a_spot()
-target = stock_df[stock_df['行业'].str.contains('新能源车')]
-# 计算 ROE/PE 并筛选 ROE>15% 且 PE<20 的标的
+df = ak.stock_board_industry_cons_em(symbol="汽车整车")   # 东方财富行业板块名
+df["pe"] = pd.to_numeric(df["市盈率-动态"], errors="coerce")
+cands = df[(df["pe"] > 0) & (df["pe"] < 20)]               # 剔除亏损股，PE<20
 ```
-> 运行：`python scripts/sector_screening.py`
+> 运行：`python scripts/sector_screening.py 汽车整车`（东方财富接口通常仅国内网络可访问；`INVEST_OFFLINE=1` 用示例数据）
 
 ## 4️⃣ 投资组合构建 & 风险管理
 
@@ -134,6 +135,10 @@ print(ef.clean_weights())
 | Coursera | Investment Management (Geneva) | https://www.coursera.org/learn/investment-management |
 | Coursera | Machine Learning for Trading 专项 (NYIF & Google Cloud) | https://www.coursera.org/specializations/machine-learning-trading |
 | CFA Institute | Investment Foundations（免费） | https://www.cfainstitute.org/programs/investment-foundations-certificate |
+| Coursera | Financial Markets（耶鲁，Robert Shiller，可免费旁听） | https://www.coursera.org/learn/financial-markets-global |
+| MIT OCW | 15.401 Finance Theory I（估值、风险与收益、资本预算） | https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/ |
+| MIT OCW | 18.S096 金融数学专题（量化所需的概率、随机过程、优化） | https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/ |
+| QuantEcon | 经济与金融的 Python 量化讲义（免费，含可运行代码） | https://quantecon.org/lectures/ |
 | Class Central | 最佳投资课程榜单 | https://www.classcentral.com/report/best-investment-courses/ |
 
 ### 6.4 博客 / 资讯
@@ -174,7 +179,7 @@ print(ef.clean_weights())
 | 周次 | 主题 | 任务 |
 |------|------|------|
 | 1‑2 | 金融基础 & 基金设立 | 读《私募基金实务》1‑3章，写《基金设立检查清单》 |
-| 3‑4 | 行业赛道模型 | 用 AkShare 抓新能源车数据，写行业报告 |
+| 3‑4 | 行业赛道模型 | 用 AkShare 抓一个行业板块（如“汽车整车”“半导体”）的成分股数据，写行业报告 |
 | 5‑6 | 标的筛选实战 | 运行 `scripts/sector_screening.py`，筛 5 只 A 股 |
 | 7‑8 | 组合构建与回测 | 用 `pyportfolioopt` 生成最小波动组合；回测 1 年 |
 | 9‑10| 投后监控 | 用 quantstats 监控最大回撤、行业敞口 |
