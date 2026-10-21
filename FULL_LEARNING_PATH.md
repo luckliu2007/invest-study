@@ -162,8 +162,8 @@ print(ef.clean_weights())
 | Charlie Munger | 多元思维 | 《穷查理宝典》在线版 https://www.stripe.press/poor-charlies-almanack |
 | Ray Dalio | 宏观 | 《原则》https://www.principles.com/ |
 | Howard Marks | 债券/周期 | 备忘录 https://www.oaktreecapital.com/insights/memos |
-| Peter Lynch | 成长 | https://www.youtube.com/watch?v=UVD1o8B6Ftc |
-| Joel Greenblatt | 价值+质量 | Magic Formula https://www.gurufocus.com/ |
+| Peter Lynch | 成长 | 《彼得·林奇的成功投资》（One Up On Wall Street）：普通投资者如何从身边发现成长股 |
+| Joel Greenblatt | 价值+质量 | Magic Formula（神奇公式）官网 https://www.magicformulainvesting.com/ ，配合《股市稳赚》（The Little Book That Beats the Market） |
 | David Swensen | 资产配置 | Yale Endowment |
 | Catherine Wood (ARK) | 创新 | https://ark-invest.com/research/ |
 | Jack Bogle | 指数 | https://investor.vanguard.com/investor-resources-education |
