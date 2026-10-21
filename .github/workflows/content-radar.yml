@@ -2,7 +2,8 @@ name: Content Radar
 
 on:
   schedule:
-    - cron: '0 1 * * *'   # 每天 01:00 UTC（北京时间 09:00）
+    # 避开整点高峰（整点任务常被 GitHub 推迟数小时），确保早于 02:30 UTC 的每日审核
+    - cron: '41 21 * * *'   # 每天 21:41 UTC（北京时间次日 05:41）
   workflow_dispatch:
 
 permissions:
