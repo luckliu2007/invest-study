@@ -72,12 +72,12 @@
 - Buffett/Munger 股东大会视频档案：https://buffett.cnbc.com/
 - Dalio《原则》：https://www.principles.com/
 - Marks 备忘录：https://www.oaktreecapital.com/insights/memos
-- Greenblatt Magic Formula：https://www.gurufocus.com/
+- Greenblatt Magic Formula（神奇公式）官网：https://www.magicformulainvesting.com/
 - ARK 研究：https://ark-invest.com/research/
 - Bogle/Vanguard：https://investor.vanguard.com/investor-resources-education 与 https://boglecenter.net/
 
 ## 六、📰 博客 / 资讯 / 播客 / 简报
-- QuantStart（量化教学）：https://www.quantstart.com
+- QuantStart（量化教学；2026-10 起官网返回 502 无法访问，可读网络存档 https://web.archive.org/web/2026/https://www.quantstart.com/ ）：https://www.quantstart.com
 - Alpha Architect（因子研究）：https://alphaarchitect.com
 - Flirting with Models（Newfound Research）：https://www.thinknewfound.com
 - 集思录（中文固收/套利）：https://www.jisilu.cn
