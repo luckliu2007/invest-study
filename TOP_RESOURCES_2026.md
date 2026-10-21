@@ -19,6 +19,7 @@
 | mplfinance | K线/金融图表绘制 | https://github.com/matplotlib/mplfinance |
 | Qlib | 微软 AI 量化平台：因子挖掘→模型→回测，支持 A 股 | https://github.com/microsoft/qlib |
 | AKQuant | AKShare 团队出品的回测/交易框架：Rust 内核 + Python 接口，内置滚动训练(Walk-forward) | https://github.com/akfamily/akquant |
+| 看海量化 OSkhQuant | A 股量化回测 Windows 桌面软件（开源版）：免开户、免 QMT，BaoStock/Tushare 数据存本地 DuckDB，Python 写策略一键出回测报告；CC BY-NC 4.0（非商用），商业版另售 | https://github.com/khscience/OSkhQuant |
 
 ## 二、📚 经典书单（入门→进阶）
 **价值/基本面**
@@ -56,6 +57,7 @@
 - **全球**：yfinance、pandas-datareader、fredapi(宏观)、Alpha Vantage、Nasdaq Data Link(原Quandl)
 - **另类**：finagg(聚合多免费API)
 - **给 AI 编程助手用**：a-stock-data（A 股全栈数据 Skill 文件，聚合 34 个免费数据源：行情、研报、资金面、公告、宏观利率、期货、可转债等）：https://github.com/simonlin1212/a-stock-data
+- **本地 A 股数据湖**：CNEquity（免注册、免 token，把行情/财报/资金面/公告/宏观等 55 个数据集增量采集为本地 Parquet，带质量审计与 PIT 语义，可经 MCP 接给 AI 助手；数据来自东财、新浪、BaoStock 等公开源，覆盖以其数据集目录为准）：https://github.com/rootSunc/CNEquity
 - **研报/公告**：交易所官网、巨潮资讯、公司 IR 页
 
 ## 五、🧠 大师公开资源
