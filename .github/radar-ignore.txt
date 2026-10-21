@@ -6,3 +6,5 @@ OpenByteInc/QuantDinger
 chaitin/PandaWiki
 hello245m/free-stockdb
 mars-tw/anti-gambling-trader-tw
+agent-next/polymarket-paper-trader
+quantskills/quantskills

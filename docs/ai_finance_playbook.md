@@ -33,6 +33,13 @@
 
 **MCP（Model Context Protocol）**：把行情、财报、自己的研究笔记封装成 MCP 服务器，Claude / ChatGPT 等助手就能直接调用。OpenBB 已把自己定位为“面向分析师、量化和 AI 智能体的开放数据平台”，是现成的数据入口。
 
+想先体验现成的投研 MCP 服务器，可以从这两个开始：
+
+| 项目 | 做什么 | 学习重点 |
+|------|--------|----------|
+| [MaverickMCP](https://github.com/wshobson/maverick-mcp) | 本地运行，基于 yfinance 拉美股数据，核心工具免 API Key；行情、技术指标、选股、持仓与交易日志，可选回测和带引用的公司研究 | 只读分析型 MCP 的工具设计；不下单，适合入门 |
+| [Alpaca MCP Server](https://github.com/alpacahq/alpaca-mcp-server) | 美国券商 Alpaca 官方出品，用自然语言查行情、看持仓、下单（股票/ETF/期权/加密） | 交易型 MCP 的权限与风控；默认连免费模拟盘（`ALPACA_PAPER_TRADE=true`），**学习时不要切到实盘** |
+
 ## 4. 工程要点
 - 数据：用 `akshare`/`yfinance`/`OpenBB` 拉取，存入 parquet/SQL
 - RAG：文档切块 → embedding → 向量库（Chroma/FAISS）
