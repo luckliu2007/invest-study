@@ -55,7 +55,11 @@ invest-study/
 │  ├─ partnership_agreement_template.md
 │  └─ ai_finance_playbook.md
 ├─ .github/workflows/backtest.yml    # CI：push/PR + 每周一巡检（产物存 artifact）
-├─ notebooks/  data/  reports/       # 学习产物目录
+├─ notebooks/                       # 练习 Notebook（离线可运行，CI 自动执行）
+│  ├─ 01_data_and_visualization.ipynb      # 收益、波动、回撤、相关性
+│  ├─ 02_factor_backtest_lookahead.ipynb   # 动量因子回测与前视偏差
+│  └─ 03_portfolio_risk.ipynb              # 组合优化、风险贡献、VaR/CVaR
+├─ data/  reports/                   # 数据与输出目录
 ```
 
 ## 🚀 快速开始
@@ -66,6 +70,8 @@ python scripts/optimize_portfolio.py    # 跑组合优化 → reports/portfolio_
 python scripts/fund_raise_tracker.py    # 生成募集跟踪表 → reports/fund_raise_tracker.xlsx
 python scripts/exit_simulation.py       # 退出溢价 IRR 模拟 → reports/exit_simulation.csv
 ```
+
+**练习 Notebook**（离线可运行）：`jupyter lab notebooks/`，按 01 → 02 → 03 的顺序做。第 2 个用纯随机数据演示**前视偏差**：信号没有滞后时，毫无规律的数据也能回测出年化 60% 以上、夏普 6 的“策略”。
 
 > 所有脚本在无网络 / 缺少可选依赖时会自动降级为内置示例数据，保证流程可跑通。
 > 行业筛选的实盘数据来自东方财富行业板块接口，通常只在国内网络可访问；设置 `INVEST_OFFLINE=1` 可直接用示例数据。

@@ -16,5 +16,36 @@
   "top_n": 8,
   "verified_transfers": {
     "OpenBB-finance/OpenBB": "openbq-org/OpenBB"
-  }
+  },
+  "require_keywords": [
+    "quant",
+    "量化",
+    "trading",
+    "交易",
+    "backtest",
+    "回测",
+    "portfolio",
+    "组合",
+    "finance",
+    "financial",
+    "金融",
+    "invest",
+    "投资",
+    "factor",
+    "因子",
+    "stock",
+    "股票",
+    "a股",
+    "a-share",
+    "market data",
+    "行情",
+    "研报"
+  ],
+  "exclude_keywords": [
+    "crypto",
+    "加密货币",
+    "memecoin",
+    "airdrop",
+    "空投"
+  ]
 }
