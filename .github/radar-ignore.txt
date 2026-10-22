@@ -8,3 +8,8 @@ hello245m/free-stockdb
 mars-tw/anti-gambling-trader-tw
 agent-next/polymarket-paper-trader
 quantskills/quantskills
+jundizhou/easy-stock
+TNT-Likely/PanWatch
+chengzuopeng/stock-sdk
+LuxAlgo/PineTS
+ryanfrigo/kalshi-ai-trading-bot
