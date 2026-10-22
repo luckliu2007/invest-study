@@ -4,3 +4,5 @@
 ^https://www\.quantstart\.com
 # 深圳证券交易所官网：海外网络（含 GitHub Actions）通常无法连接，国内可正常访问
 ^https?://www\.szse\.cn
+# 上海证券交易所官网：海外网络（含 GitHub Actions）访问常超时，国内可正常访问
+^https?://www\.sse\.com\.cn
