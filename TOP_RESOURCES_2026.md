@@ -108,5 +108,27 @@
 - arXiv q-fin：https://arxiv.org/list/q-fin/recent
 - NBER：https://www.nber.org
 
+## 九、🛡️ 风险管理与衍生品
+
+| 资源 | 说明 | 链接 |
+|------|------|------|
+| GARP FRM | 金融风险管理师（FRM）官方页面：考试结构、学习大纲、报名与备考资源 | https://www.garp.org/frm |
+| CME Group Institute：All About Options | 芝商所免费期权系列课程，配模拟交易账户 | https://www.cmegroup.com/education/courses/curriculum-all-about-options.html |
+| Futures Fundamentals | CME、FIA、NFA 等行业机构联合提供的免费期货与衍生品入门教育 | https://www.futuresfundamentals.org/ |
+| MIT 18.S096 金融数学专题 | 随机过程、Black-Scholes 推导等量化基础（见第三节课程） | https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/ |
+| 本仓库练习 | `notebooks/04_options_pricing.ipynb`：Black-Scholes、希腊字母、看涨-看跌平价、蒙特卡洛定价 | — |
+
+## 十、🏛️ A 股市场制度（官方原文）
+
+制度细节会修订，学习和实操都以交易所和证监会的现行原文为准。
+
+| 文件 / 入口 | 说明 | 链接 |
+|------|------|------|
+| 《上海证券交易所交易规则（2026年修订）》 | 上证发〔2026〕41 号，2026-07-06 起施行。据上交所公告，主要变化包括：盘后固定价格交易扩展至全部 A 股和 ETF，基金收盘阶段改为收盘集合竞价，主板风险警示股票涨跌幅限制由 5% 调整为 10% | https://www.sse.com.cn/lawandrules/sselawsrules2025/stocks/exchange/c/c_20260424_10816482.shtml |
+| 深圳证券交易所业务规则 | 深交所同步修订交易规则（2026-07-06 起施行），据报道引入了做市商制度；规则原文见官网“业务规则”栏目 | https://www.szse.cn/ |
+| 北京证券交易所 | 北交所同步修订交易规则，规则原文见官网 | https://www.bse.cn/ |
+| 《上市公司信息披露管理办法》（证监会令第 226 号） | 2025-07-01 起施行，原第 182 号令同时废止；强化风险揭示，确立暂缓与豁免披露制度 | https://www.csrc.gov.cn/csrc/c101953/c7547359/content.shtml |
+| 国家法律法规数据库 | 检索《证券法》《公司法》等法律的现行有效原文 | https://flk.npc.gov.cn/ |
+
 ---
 ⚠️ 本清单为学习用途整理，不构成投资建议。链接可能随时间失效，欢迎 PR 补充。
