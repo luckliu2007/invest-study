@@ -220,12 +220,12 @@ invest-study/
 ├─ scripts/   (sector_screening / optimize_portfolio / fund_raise_tracker)
 ├─ docs/      (fund_setup_checklist / PPM_template / partnership_agreement / ai_finance_playbook)
 ├─ .github/workflows/backtest.yml
-└─ notebooks/（3 个练习）data/ reports/
+└─ notebooks/（4 个练习）data/ reports/
 ```
 
 ## ✅ 接下来可以做的事
 1. 克隆仓库，安装依赖：`pip install -r requirements.txt`
-2. 运行 `python scripts/sector_screening.py` 验证筛选流程，再按顺序做 `notebooks/` 里的 3 个练习（数据与可视化 → 因子回测与前视偏差 → 组合优化与风险）
+2. 运行 `python scripts/sector_screening.py` 验证筛选流程，再按顺序做 `notebooks/` 里的 4 个练习（数据与可视化 → 因子回测与前视偏差 → 组合优化与风险 → 期权定价）；风险管理、衍生品和 A 股制度的官方资料见 `TOP_RESOURCES_2026.md` 第九、十节
 3. 阅读 `docs/ai_finance_playbook.md` 了解 AI 投研落地
 4. 提交练习 Notebook / 报告，触发 CI 自动回测
 

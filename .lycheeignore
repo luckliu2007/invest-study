@@ -2,3 +2,7 @@
 ^https?://www\.amac\.org\.cn
 # QuantStart：2026-10 起官网返回 502（文中已附网络存档链接）；恢复后删除本行
 ^https://www\.quantstart\.com
+# 深圳证券交易所官网：海外网络（含 GitHub Actions）通常无法连接，国内可正常访问
+^https?://www\.szse\.cn
+# 上海证券交易所官网：海外网络（含 GitHub Actions）访问常超时，国内可正常访问
+^https?://www\.sse\.com\.cn
