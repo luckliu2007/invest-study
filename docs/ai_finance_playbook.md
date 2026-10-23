@@ -31,7 +31,7 @@
 | [FinGPT](https://github.com/AI4Finance-Foundation/FinGPT) | 开源金融大模型与微调方案 | 金融领域微调、情绪分析基准 |
 | [RD-Agent](https://github.com/microsoft/RD-Agent) + [Qlib](https://github.com/microsoft/qlib) | 智能体自动提出因子假设 → 写代码 → 回测 → 迭代 | 自动化因子研发闭环 |
 
-**MCP（Model Context Protocol）**：把行情、财报、自己的研究笔记封装成 MCP 服务器，Claude / ChatGPT 等助手就能直接调用。OpenBB 已把自己定位为“面向分析师、量化和 AI 智能体的开放数据平台”，是现成的数据入口。
+**MCP（Model Context Protocol）**：把行情、财报、自己的研究笔记封装成 MCP 服务器，Claude / ChatGPT 等助手就能直接调用。OpenBB 已把自己定位为“面向分析师、量化和 AI 智能体的开放数据平台”，是现成的数据入口。自建 MCP 服务器请按 [2026-07-28 版规范](https://modelcontextprotocol.io/specification/2026-07-28/changelog)开发。
 
 想先体验现成的投研 MCP 服务器，可以从这两个开始：
 
@@ -51,6 +51,7 @@
 - 不要直接把 LLM 输出当交易信号，需人工 + 回测验证
 - 注意合规：内幕信息、数据安全、客户隐私
 - 智能体框架的回测收益普遍存在前视偏差和过拟合，论文/README 里的收益率不要当真
+- **让智能体真正下单之前先定授权等级**：默认只给建议（A0）或每笔人工确认（A1）；放开小额自动交易（A2）前，必须有单笔与每日限额、成本上限、一键停用和完整操作记录。用 [智能体授权与管控清单](https://github.com/luckliu2007/ai-ml-data-roadmap/blob/main/templates/agent-governance-checklist.md) 逐项核对，并对照 [OWASP 智能体应用十大风险（2026）](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
 
 ## 6. 入门练习
 1. 用 OpenBB 拉一只股票财务，让 LLM 写一段「一句话投资要点」
