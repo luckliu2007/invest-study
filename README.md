@@ -5,15 +5,16 @@
 [![Tests](https://img.shields.io/badge/tests-pytest-green.svg)](./tests)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
-> 投资研究 / 量化 / 基金实务的**系统性自学与团队培训仓库**。
+> 投资研究 / 量化 / 基金实务 / **企业投资**的**系统性自学与团队培训仓库**。
 > 由交易分析团队基于公开资料持续维护，融合基本面、技术面、量化与 AI 投研新风。
 
 ## 🧭 快速导航
+- 🏢 **企业投资模块**：[`corporate-investment/`](./corporate-investment)（资本配置与项目评估、投决会与治理、CVC 与产业基金、并购与整合、跨境合规，附投决会报告、尽调清单、100 天整合计划等模板）
 - 📍 **完整学习路径**：[`FULL_LEARNING_PATH.md`](./FULL_LEARNING_PATH.md)（8 章，理论→实战→代码→项目）
 - 🌟 **全网精选资源(2026)**：[`TOP_RESOURCES_2026.md`](./TOP_RESOURCES_2026.md)（课程/书/数据/大师/AI）
 - 🤖 **AI 投研手册**：[`docs/ai_finance_playbook.md`](./docs/ai_finance_playbook.md)
 - 📋 **基金实务模板**：[`docs/`](./docs)（设立清单 / PPM / 合伙协议）
-- 🛠️ **可运行脚本**：[`scripts/`](./scripts)（筛选 / 组合优化 / 募集跟踪 / 退出模拟）
+- 🛠️ **可运行脚本**：[`scripts/`](./scripts)（筛选 / 组合优化 / 募集跟踪 / 退出模拟 / 资本预算）
 - ✅ **单元测试**：[`tests/`](./tests)（`pytest`，覆盖脚本核心逻辑与降级路径）
 - 🔧 **自动化 CI**：[`.github/workflows/backtest.yml`](./.github/workflows/backtest.yml)（test + smoke 两段式）
 
@@ -59,7 +60,8 @@ invest-study/
 │  ├─ 01_data_and_visualization.ipynb      # 收益、波动、回撤、相关性
 │  ├─ 02_factor_backtest_lookahead.ipynb   # 动量因子回测与前视偏差
 │  ├─ 03_portfolio_risk.ipynb              # 组合优化、风险贡献、VaR/CVaR
-│  └─ 04_options_pricing.ipynb             # Black-Scholes、希腊字母、蒙特卡洛定价
+│  ├─ 04_options_pricing.ipynb             # Black-Scholes、希腊字母、蒙特卡洛定价
+│  └─ 05_ma_valuation.ipynb                # 并购估值：DCF、协同效应定价、商誉减值
 ├─ data/  reports/                   # 数据与输出目录
 ```
 
@@ -70,9 +72,10 @@ python scripts/sector_screening.py 汽车整车   # 按东方财富行业板块�
 python scripts/optimize_portfolio.py    # 跑组合优化 → reports/portfolio_weights.csv
 python scripts/fund_raise_tracker.py    # 生成募集跟踪表 → reports/fund_raise_tracker.xlsx
 python scripts/exit_simulation.py       # 退出溢价 IRR 模拟 → reports/exit_simulation.csv
+python scripts/capital_budgeting.py     # 项目投资评估（NPV/IRR/回收期/情景/敏感性）→ reports/capital_budgeting.csv
 ```
 
-**练习 Notebook**（离线可运行）：`jupyter lab notebooks/`，按 01 → 04 的顺序做。第 2 个用纯随机数据演示**前视偏差**：信号没有滞后时，毫无规律的数据也能回测出年化 60% 以上、夏普 6 的“策略”。
+**练习 Notebook**（离线可运行）：`jupyter lab notebooks/`，按 01 → 05 的顺序做（05 为企业并购估值）。第 2 个用纯随机数据演示**前视偏差**：信号没有滞后时，毫无规律的数据也能回测出年化 60% 以上、夏普 6 的“策略”。
 
 > 所有脚本在无网络 / 缺少可选依赖时会自动降级为内置示例数据，保证流程可跑通。
 > 行业筛选的实盘数据来自东方财富行业板块接口，通常只在国内网络可访问；设置 `INVEST_OFFLINE=1` 可直接用示例数据。
