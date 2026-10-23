@@ -20,7 +20,7 @@
 
 | 地区 | 机制 | 2026 年的变化 | 来源 |
 | --- | --- | --- | --- |
-| 美国 | 美国外国投资委员会（CFIUS）审查外国投资者对美国企业的投资，重点是关键技术、关键基础设施和敏感个人数据 | — | [美国财政部 CFIUS 页面](https://home.treasury.gov/policy-issues/international/the-committee-on-foreign-investment-in-the-united-states-cfius) |
+| 美国 | 美国外国投资委员会（CFIUS）审查外国投资者对美国企业的投资，重点是关键技术、关键基础设施和敏感个人数据 | — | [CFIUS 官网（美国财政部）](https://www.cfius.gov/) |
 | 欧盟 | 外资审查法规 | 修订后的法规于 2026 年 6 月正式通过，**要求所有成员国建立审查机制**，并对国防与两用物项、半导体、量子与人工智能、关键原材料、交通能源和数字基础设施等领域实行强制审查；**2028-01-17 起适用**。决定权仍在各成员国 | [Baker McKenzie 解读（2026-07）](https://foreigninvestment.bakermckenzie.com/2026/07/01/the-revised-eu-fdi-screening-regulation-a-new-era-of-fdi-enforcement-in-the-eu/) |
 
 **实务提示**：投资欧盟敏感行业的标的，要预留审查时间；在 2028 年新规适用前后签约的交易，要确认适用哪套规则。

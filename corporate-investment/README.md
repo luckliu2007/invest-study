@@ -34,7 +34,7 @@
 | 并购是否需要反垄断申报 | 《国务院关于经营者集中申报标准的规定》（2024 年修订，国务院令第 773 号）：全部参与方全球营业额合计超过 120 亿元，或境内营业额合计超过 40 亿元，**且**至少两方境内营业额各超过 8 亿元，须事先申报 | [中国政府网](https://www.gov.cn/zhengce/content/202401/content_6928387.htm) |
 | 上市公司重大资产重组 | 《上市公司重大资产重组管理办法》（2025 年修正，证监会令第 230 号）：新增分期支付、简易审核程序等 | [证监会](https://www.csrc.gov.cn/csrc/c101953/c7558586/content.shtml) · [国务院公报全文](https://www.gov.cn/gongbao/2025/issue_12166/202507/content_7032496.html) |
 | 上市公司信息披露 | 《上市公司信息披露管理办法》（证监会令第 226 号，2025-07-01 施行） | [证监会](https://www.csrc.gov.cn/csrc/c101953/c7547359/content.shtml) |
-| 企业合并与商誉 | 《企业会计准则第 20 号——企业合并》《企业会计准则第 8 号——资产减值》：商誉至少每年年末减值测试 | [第 20 号](https://kjs.mof.gov.cn/zt/kjzzss/kuaijizhunzeshishi/200806/t20080618_46228.htm) · [第 8 号](https://kjs.mof.gov.cn/zt/kjzzss/kuaijizhunzeshishi/200806/t20080618_46240.htm) |
+| 企业合并与商誉 | 《企业会计准则第 20 号——企业合并》《企业会计准则第 8 号——资产减值》：商誉至少每年年末减值测试 | [第 20 号](https://kjs.mof.gov.cn/zt/kjzzss/kuaijizhunzeshishi/200806/t20080618_46228.htm) · [第 8 号](http://www.mof.gov.cn/zhengwuxinxi/zhengcefabu/2006zcfb/200805/t20080519_23147.htm) |
 | 私募基金（产业基金、CVC 基金） | 《私募投资基金监督管理条例》（国务院令第 762 号，2023-09-01 施行） | [中国政府网](https://www.gov.cn/zhengce/zhengceku/202307/content_6890739.htm) |
 | 境外投资：发改委 | 《企业境外投资管理办法》（发改委令 2017 年第 11 号） | [发改委](https://www.ndrc.gov.cn/xxgk/zcfb/fzggwl/201712/t20171226_960849.html) |
 | 境外投资：商务部 | 《境外投资管理办法》（商务部令 2014 年第 3 号） | [商务部](http://www.mofcom.gov.cn/zcfb/blgg/art/2014/art_1d349047003649b7ba2cd5672c1debed.html) |

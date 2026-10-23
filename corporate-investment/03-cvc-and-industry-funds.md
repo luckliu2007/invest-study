@@ -10,7 +10,7 @@
 | 作为 LP 投资外部基金 | 低：不直接决策 | 高：借助专业 GP 覆盖更多项目 | 想获取行业信息流和投资能力，暂不自建团队 |
 | 发起或参与产业基金（担任 GP 或主要 LP） | 中到高 | 高：撬动外部资金 | 产业链布局、与地方政府或产业资本合作 |
 
-美国律所 Fenwick 的 CVC 实务指南把 CVC 的组织形式概括为三类：作为外部 VC 基金的单一 LP（最独立）、在授权范围内自主投资的全资子公司、直接为母公司工作并逐笔获得业务部门支持的内部团队（最整合）。见 [Corporate Venture 101](https://fenwick.com/insights/publications/corporate-venture-101-considerations-for-starting-corporate-vc-programs)。
+美国律所 Fenwick 的 CVC 实务指南把 CVC 的组织形式概括为三类：作为外部 VC 基金的单一 LP（最独立）、在授权范围内自主投资的全资子公司、直接为母公司工作并逐笔获得业务部门支持的内部团队（最整合）。见 [Corporate Venture 101](https://www.fenwick.com/insights/publications/corporate-venture-101-considerations-for-starting-corporate-vc-programs)。
 
 ## 2. 目标：战略回报和财务回报要先排好序
 
