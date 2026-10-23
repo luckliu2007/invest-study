@@ -13,3 +13,4 @@ TNT-Likely/PanWatch
 chengzuopeng/stock-sdk
 LuxAlgo/PineTS
 ryanfrigo/kalshi-ai-trading-bot
+Jakeschincariol/day-trader-skill
