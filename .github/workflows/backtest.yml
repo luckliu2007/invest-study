@@ -87,6 +87,7 @@ jobs:
           python scripts/optimize_portfolio.py
           python scripts/fund_raise_tracker.py
           python scripts/exit_simulation.py
+          python scripts/capital_budgeting.py
       - name: Upload artifacts
         uses: actions/upload-artifact@v7
         with:

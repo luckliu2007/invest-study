@@ -118,6 +118,16 @@
 | MIT 18.S096 金融数学专题 | 随机过程、Black-Scholes 推导等量化基础（见第三节课程） | https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/ |
 | 本仓库练习 | `notebooks/04_options_pricing.ipynb`：Black-Scholes、希腊字母、看涨-看跌平价、蒙特卡洛定价 | — |
 
+## 十一、🏢 企业投资（企业视角）
+
+| 资源 | 说明 | 链接 |
+|------|------|------|
+| 本仓库企业投资模块 | 资本配置、投决会、CVC 与产业基金、并购整合、跨境合规，附模板与法规速查 | ./corporate-investment |
+| Damodaran Corporate Finance | 企业投资、融资、分红决策的完整公开课 | https://pages.stern.nyu.edu/~adamodar/New_Home_Page/corpfin.html |
+| Damodaran 当年数据 | 行业 β、资本成本、股权风险溢价、国家风险溢价 | https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datacurrent.html |
+| Introduction to Corporate Finance（沃顿） | 折现现金流与项目评估入门 | https://www.coursera.org/learn/wharton-finance |
+| Bain 2026 全球并购报告 | 并购趋势、整合与协同 | https://www.bain.com/about/media-center/press-releases/2026/global-ma-poised-to-sustain-momentum-in-2026-after-great-rebound-finds-bain--company/ |
+
 ## 十、🏛️ A 股市场制度（官方原文）
 
 制度细节会修订，学习和实操都以交易所和证监会的现行原文为准。

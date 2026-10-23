@@ -213,6 +213,18 @@ print(ef.clean_weights())
 2. 10 份年报做 RAG → 问「哪家公司毛利率最高」
 3. FinBERT 对一周新闻打情绪分 → 画趋势图
 
+## 🔟 企业投资（站在企业的角度）
+
+个人投资者关心“买什么”，企业还要回答“资本该投向哪里、怎么决策、怎么整合、怎么合规”。完整内容见 [`corporate-investment/`](./corporate-investment)：
+
+| 章节 | 内容 | 配套 |
+|------|------|------|
+| 01 资本配置与项目评估 | 资本的五个去向、ROIC 与 WACC、NPV/IRR/回收期、情景与敏感性、实物期权 | `scripts/capital_budgeting.py` |
+| 02 投资流程、投决会与治理 | 十步流程、投决会规则与分级授权、投后管理与复盘 | 投决会报告、尽调清单、投后复盘模板 |
+| 03 战略投资、CVC 与产业基金 | 参与方式比较、战略与财务目标、治理与激励、私募基金条例 | 基金设立清单、PPM、合伙协议模板 |
+| 04 并购与投后整合 | 协同效应定价、交易结构、反垄断与重组审批、商誉减值、100 天整合 | `notebooks/05_ma_valuation.ipynb`、100 天整合计划 |
+| 05 跨境投资与合规 | 发改委 / 商务部 / 外汇三道手续、CFIUS、欧盟外资审查新规 | 国别指南、自查清单 |
+
 ## 📂 项目结构（更新后）
 ```
 invest-study/
@@ -220,7 +232,7 @@ invest-study/
 ├─ scripts/   (sector_screening / optimize_portfolio / fund_raise_tracker)
 ├─ docs/      (fund_setup_checklist / PPM_template / partnership_agreement / ai_finance_playbook)
 ├─ .github/workflows/backtest.yml
-└─ notebooks/（4 个练习）data/ reports/
+└─ notebooks/（5 个练习）data/ reports/
 ```
 
 ## ✅ 接下来可以做的事
