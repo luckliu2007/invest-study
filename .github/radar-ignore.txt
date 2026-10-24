@@ -14,3 +14,4 @@ chengzuopeng/stock-sdk
 LuxAlgo/PineTS
 ryanfrigo/kalshi-ai-trading-bot
 Jakeschincariol/day-trader-skill
+YichengYang-Ethan/oracle3-prediction-market-agent
