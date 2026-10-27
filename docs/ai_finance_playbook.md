@@ -14,7 +14,7 @@
 | 策略代码生成 | 用自然语言生成、调试回测脚本 | Claude Code / Codex / Cursor / Copilot 等 AI 编程智能体 |
 
 ## 2. 推荐组合
-- **OpenBB + LLM**：开源投研终端拉数据，LLM 做解读
+- **OpenBB + LLM**：用 OpenBB 开放数据平台（2026-09 发布 5.0）拉数据，LLM 做解读
 - **FinBERT**（ProsusAI/finbert）：金融情绪分类基准模型（2022 年后未更新，新项目可直接用 LLM 做情绪分类，用 FinBERT 做对照）
 - **AlphaSense / 类似 AI 搜索**：替代关键词检索，语义找资料
 
@@ -43,14 +43,16 @@
 ## 4. 工程要点
 - 数据：用 `akshare`/`yfinance`/`OpenBB` 拉取，存入 parquet/SQL
 - RAG：文档切块 → embedding → 向量库（Chroma/FAISS）
-- 评估：让 LLM 输出带引用的答案，人工抽检
+- 评估：让 LLM 输出带引用的答案，人工抽检。正式使用前，先用自己准备的 20–50 道带标准答案的题（例如“某公司 2025 年经营现金流是多少”）测一遍。公开评测可以参考 [Vals AI Finance Agent 基准](https://www.vals.ai/benchmarks/finance_agent)：537 道初级分析师任务，2026-06 排名第一的模型准确率为 64.37%，也就是还有三分之一以上答错（更多证据见 [投资证据与研究纪律](../EVIDENCE_2026.md) 第三节）
 - 监控：记录每次分析的输入/输出，防止幻觉
 
 ## 5. 风险提示
 - LLM 会编造数字（幻觉）→ 关键数据必须回查源文件
 - 不要直接把 LLM 输出当交易信号，需人工 + 回测验证
 - 注意合规：内幕信息、数据安全、客户隐私
-- 智能体框架的回测收益普遍存在前视偏差和过拟合，论文/README 里的收益率不要当真
+- 智能体框架的回测收益普遍存在前视偏差和过拟合，论文/README 里的收益率不要当真；先问一共试了多少个版本，再用 [`scripts/backtest_stats.py`](../scripts/backtest_stats.py) 的折减夏普比率（DSR）打折
+- **大模型自带的前视偏差**：通用大模型的训练数据里包含回测期之后才发生的事，用它给历史新闻、财报打分再回测，结果可能偏乐观；它还可能被自己对公司的已有印象干扰（[Glasserman & Lin](https://arxiv.org/abs/2309.17322)）。做法：把公司名匿名化做对照，只把模型训练截止日之后的数据当作样本外，必要时用按时间截断训练的模型（如 [ChronoGPT](https://arxiv.org/abs/2502.21206)）对照
+- **A 股自动下单要守程序化交易规则**：用脚本或智能体自动下单前，先读沪深北交易所《程序化交易管理实施细则》（2025-07-07 起实施）。程序化交易实行报告制度，高频交易认定标准和四类异常交易都有明确规定（见 [`TOP_RESOURCES_2026.md`](../TOP_RESOURCES_2026.md) 第十节）
 - **让智能体真正下单之前先定授权等级**：默认只给建议（A0）或每笔人工确认（A1）；放开小额自动交易（A2）前，必须有单笔与每日限额、成本上限、一键停用和完整操作记录。用 [智能体授权与管控清单](https://github.com/luckliu2007/ai-ml-data-roadmap/blob/main/templates/agent-governance-checklist.md) 逐项核对，并对照 [OWASP 智能体应用十大风险（2026）](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
 
 ## 6. 入门练习
@@ -59,3 +61,4 @@
 3. 用 FinBERT 和 LLM 分别对一周财经新闻打情绪分，对比两者差异并画趋势图
 4. 本地跑通 TradingAgents 或 ai-hedge-fund，读懂一次完整决策链路里每个智能体的输入输出
 5. 用 Vibe-Trading 对一只 A 股做一次“研究 → 回测 → 复盘”，再用本仓库 `scripts/` 的结果交叉验证
+6. 让同一个模型给 50 条历史新闻打两次情绪分：一次保留公司名，一次把公司名换成“某公司”，比较两组分数与之后股价表现的关系，体会前视偏差和分心效应

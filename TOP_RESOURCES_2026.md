@@ -2,12 +2,13 @@
 
 > 由交易分析团队基于公开信息筛选，覆盖「体系 → 量化代码 → 数据 → 大师 → 资讯 → AI 新风」。
 > 链接均来自公开可访问来源；排名为大致参考，请以仓库实时状态为准。
+> 先读 [投资证据与研究纪律](EVIDENCE_2026.md)：主动与被动基金的长期对比、投资者的“买卖时点损失”、因子复现、回测过拟合和 AI 投研评测，都附原文链接。
 
 ## 一、🚀 必收藏的开源项目（GitHub）
 | 项目 | 一句话 | 链接 |
 |------|--------|------|
 | awesome-quant | 量化领域「总索引」，库/数据/书单一网打尽 | https://github.com/wilsonfreitas/awesome-quant |
-| OpenBB Terminal | 开源投研终端，数据+分析一体 | https://github.com/OpenBB-finance/OpenBB |
+| OpenBB（Open Data Platform） | 开源金融数据平台：一次接入数据源，同时供 Python、Excel、MCP（AI 智能体）和 REST API 使用；2026-09 发布 5.0 | https://github.com/OpenBB-finance/OpenBB |
 | Machine Learning for Trading | 《算法交易机器学习》官方代码(Jupyter) | https://github.com/stefan-jansen/machine-learning-for-trading |
 | financial-machine-learning | 金融 ML 工具与案例集 | https://github.com/firmai/financial-machine-learning |
 | pybroker | 轻量 ML 算法交易框架 | https://github.com/edtechre/pybroker |
@@ -18,6 +19,12 @@
 | FinanceToolkit | 财务数据+估值一体化工具 | https://github.com/JerBouma/FinanceToolkit |
 | mplfinance | K线/金融图表绘制 | https://github.com/matplotlib/mplfinance |
 | Qlib | 微软 AI 量化平台：因子挖掘→模型→回测，支持 A 股 | https://github.com/microsoft/qlib |
+| skfolio | 基于 scikit-learn 接口的组合优化与风险管理库：可以像机器学习模型一样做交叉验证，内置滚动（Walk Forward）和组合清洗交叉验证（CPCV），适合检验配置方案会不会过拟合（BSD-3） | https://github.com/skfolio/skfolio |
+| Riskfolio-Lib | 组合优化库：均值-风险框架下 26 种凸风险度量（CVaR、回撤类等）、风险平价、层次聚类配置（BSD-3） | https://github.com/dcajasn/Riskfolio-Lib |
+| vectorbt | 向量化回测：几行代码就能比较成千上万个参数组合。试得越多越要用 DSR 打折（见 `notebooks/06_backtest_overfitting.ipynb`）；这是开源社区版，另有功能更多的 PRO 版 | https://github.com/polakowo/vectorbt |
+| NautilusTrader | Rust 内核的事件驱动交易引擎：研究、确定性回测和实盘用同一套架构，Python 写策略（LGPL-3.0） | https://github.com/nautechsystems/nautilus_trader |
+| arch | 金融计量：GARCH 类波动率模型，以及检验“挑出来的最好策略是不是运气”的多重比较检验（SPA、StepM、MCS） | https://github.com/bashtage/arch |
+| edgartools | 把美国 SEC EDGAR 的 10-K、8-K、XBRL 财报、内部人交易、13F 持仓等文件变成结构化 Python 对象；免费，无需 API Key（需按 SEC 要求填写联系邮箱），附 MCP 服务器（MIT） | https://github.com/dgunning/edgartools |
 | AKQuant | AKShare 团队出品的回测/交易框架：Rust 内核 + Python 接口，内置滚动训练(Walk-forward) | https://github.com/akfamily/akquant |
 | 看海量化 OSkhQuant | A 股量化回测 Windows 桌面软件（开源版）：免开户、免 QMT，BaoStock/Tushare 数据存本地 DuckDB，Python 写策略一键出回测报告；CC BY-NC 4.0（非商用），商业版另售 | https://github.com/khscience/OSkhQuant |
 | TSP 量化工作台 tick-stock-panel | A 股自托管量化工作台（个人开源，MIT）：策略 / 因子 / 回测（含 T+1、费用、滑点）/ 盘中异动监控一体，Docker 单容器、数据存本地 Parquet，附 Open API 与 MCP；数据源插件化（已接 TickFlow、同花顺 fuyao、通达信 TdxQuant 等）；作者声明不做 AI 荐股、仅供学习研究，README 含赞助商与推荐码链接 | https://github.com/shy3130/tick-stock-panel |
@@ -88,8 +95,10 @@
 - 简报：Finimize、Morning Brew Markets、Epsilon Theory
 
 ## 七、🤖 AI / LLM 投研新风（2026）
-- 金融分析 LLM 评测：https://www.azilen.com/learning/best-llms-for-financial-analysis/
-- AI 投研工具指南：https://www.alpha-sense.com/resources/research-articles/ai-tools-for-financial-research/
+- 先看评测再选工具（详见 [投资证据与研究纪律](EVIDENCE_2026.md) 第三节）：
+  - Vals AI Finance Agent 基准（537 道初级分析师任务，持续更新各家模型的准确率；2026-06 排名第一的模型为 64.37%）：https://www.vals.ai/benchmarks/finance_agent
+  - FinanceBench（基于上市公司公开文件的问答评测，论文与数据）：https://arxiv.org/abs/2311.11944
+  - 用大模型做历史回测的前视偏差：https://arxiv.org/abs/2309.17322 、按时间截断训练的 ChronoBERT / ChronoGPT：https://arxiv.org/abs/2502.21206
 - FinBERT 情绪模型：https://github.com/ProsusAI/finbert （2022 年后未更新，适合作为情绪分类基准）
 - Vibe-Trading 个人交易智能体工作台（支持 A 股/港股/美股/加密，含回测与 MCP）：https://github.com/HKUDS/Vibe-Trading
 - FinRobot 金融分析/研报生成智能体平台：https://github.com/AI4Finance-Foundation/FinRobot
@@ -118,16 +127,6 @@
 | MIT 18.S096 金融数学专题 | 随机过程、Black-Scholes 推导等量化基础（见第三节课程） | https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/ |
 | 本仓库练习 | `notebooks/04_options_pricing.ipynb`：Black-Scholes、希腊字母、看涨-看跌平价、蒙特卡洛定价 | — |
 
-## 十一、🏢 企业投资（企业视角）
-
-| 资源 | 说明 | 链接 |
-|------|------|------|
-| 本仓库企业投资模块 | 资本配置、投决会、CVC 与产业基金、并购整合、跨境合规，附模板与法规速查 | ./corporate-investment |
-| Damodaran Corporate Finance | 企业投资、融资、分红决策的完整公开课 | https://pages.stern.nyu.edu/~adamodar/New_Home_Page/corpfin.html |
-| Damodaran 当年数据 | 行业 β、资本成本、股权风险溢价、国家风险溢价 | https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datacurrent.html |
-| Introduction to Corporate Finance（沃顿） | 折现现金流与项目评估入门 | https://www.coursera.org/learn/wharton-finance |
-| Bain 2026 全球并购报告 | 并购趋势、整合与协同 | https://www.bain.com/about/media-center/press-releases/2026/global-ma-poised-to-sustain-momentum-in-2026-after-great-rebound-finds-bain--company/ |
-
 ## 十、🏛️ A 股市场制度（官方原文）
 
 制度细节会修订，学习和实操都以交易所和证监会的现行原文为准。
@@ -139,6 +138,36 @@
 | 北京证券交易所 | 北交所同步修订交易规则，规则原文见官网 | https://www.bse.cn/ |
 | 《上市公司信息披露管理办法》（证监会令第 226 号） | 2025-07-01 起施行，原第 182 号令同时废止；强化风险揭示，确立暂缓与豁免披露制度 | https://www.csrc.gov.cn/csrc/c101953/c7547359/content.shtml |
 | 国家法律法规数据库 | 检索《证券法》《公司法》等法律的现行有效原文 | https://flk.npc.gov.cn/ |
+| 沪深北交易所《程序化交易管理实施细则》 | 2025-07-07 起实施：程序化交易报告制度；单账户每秒申报、撤单合计 300 笔以上或全日 20000 笔以上认定为高频交易；四类异常交易重点监控。用脚本或 AI 智能体自动下单前必读 | https://www.sse.com.cn/aboutus/mediacenter/hotandd/c/c_20250403_10776805.shtml |
+| 《公开募集证券投资基金销售费用管理规定》 | 2026-01-01 起施行，费率改革最后一步：调降认申购费和销售服务费，赎回费全部计入基金财产，持有超过一年的份额（货币基金除外）不再收销售服务费 | https://www.csrc.gov.cn/csrc/c100028/c7606047/content.shtml |
+| 《公开募集证券投资基金业绩比较基准指引》 | 2026-03-01 起施行：基准与投资风格匹配、一经选定不得随意变更，用来识别“风格漂移” | https://www.csrc.gov.cn/csrc/c100028/c7610827/content.shtml |
+
+## 十一、🏢 企业投资（企业视角）
+
+| 资源 | 说明 | 链接 |
+|------|------|------|
+| 本仓库企业投资模块 | 资本配置、投决会、CVC 与产业基金、并购整合、跨境合规，附模板与法规速查 | ./corporate-investment |
+| Damodaran Corporate Finance | 企业投资、融资、分红决策的完整公开课 | https://pages.stern.nyu.edu/~adamodar/New_Home_Page/corpfin.html |
+| Damodaran 当年数据 | 行业 β、资本成本、股权风险溢价、国家风险溢价 | https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datacurrent.html |
+| Introduction to Corporate Finance（沃顿） | 折现现金流与项目评估入门 | https://www.coursera.org/learn/wharton-finance |
+| Bain 2026 全球并购报告 | 并购趋势、整合与协同 | https://www.bain.com/about/media-center/press-releases/2026/global-ma-poised-to-sustain-momentum-in-2026-after-great-rebound-finds-bain--company/ |
+
+## 十二、🔬 投资证据与研究方法
+
+逐条解读见 [投资证据与研究纪律](EVIDENCE_2026.md)。
+
+| 资源 | 说明 | 链接 |
+|------|------|------|
+| Morningstar Active/Passive Barometer | 半年度报告：主动基金与同类被动基金的成功率（清盘基金算作失败），按期限、费率分档 | https://www.morningstar.com/business/insights/research/active-passive-barometer |
+| Morningstar Mind the Gap | 年度报告：投资者实际拿到的回报比基金本身少多少，以及差距来自哪里 | https://www.morningstar.com/business/insights/research/mind-the-gap |
+| UBS 全球投资回报年鉴（公开摘要版） | Dimson、Marsh、Staunton 整理的 1900 年以来 35 个市场的股票、债券、短期国债、汇率和因子长期回报（2026 版新增黄金） | https://www.ubs.com/content/dam/assets/wm/static/cio/documents/giry2026-summary-public.pdf |
+| 摩根大通长期资本市场假设（LTCMA） | 每年 10 月发布未来 10–15 年各类资产的预期回报与风险，做长期配置规划时的参照 | https://am.jpmorgan.com/us/en/asset-management/institutional/insights/portfolio-insights/ltcma/ |
+| JKP 全球因子数据 | Jensen、Kelly、Pedersen 的 153 个因子、93 个国家，免费下载 | https://jkpfactors.com/ |
+| Open Source Asset Pricing | 文献中横截面收益预测信号的开源复现代码与数据 | https://www.openassetpricing.com/ |
+| AQR 数据集 | AQR 公开并定期更新的因子数据：质量（QMJ）、低贝塔（BAB）、价值与动量等，覆盖美国和 23 个国际股票市场 | https://www.aqr.com/Insights/Datasets |
+| 《The Deflated Sharpe Ratio》 | Bailey、López de Prado：给多次试验后挑出的回测打折；本仓库 `scripts/backtest_stats.py` 复现了论文数值 | https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf |
+| 《…and the Cross-Section of Expected Returns》 | Harvey、Liu、Zhu：新因子的 t 值应超过 3.0 | https://www.nber.org/papers/w20592 |
+| Bogleheads Wiki | 指数化投资与资产配置的社区百科：低成本、分散、长期持有的完整方法 | https://www.bogleheads.org/wiki/Main_Page |
 
 ---
 ⚠️ 本清单为学习用途整理，不构成投资建议。链接可能随时间失效，欢迎 PR 补充。

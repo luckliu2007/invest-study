@@ -9,12 +9,13 @@
 > 由交易分析团队基于公开资料持续维护，融合基本面、技术面、量化与 AI 投研新风。
 
 ## 🧭 快速导航
+- 🔬 **投资证据与研究纪律（2026）**：[`EVIDENCE_2026.md`](./EVIDENCE_2026.md)（主动与被动基金的长期对比、投资者的买卖时点损失、因子复现、回测过拟合、AI 投研评测；附十条研究纪律和八个检查问题）
 - 🏢 **企业投资模块**：[`corporate-investment/`](./corporate-investment)（资本配置与项目评估、投决会与治理、CVC 与产业基金、并购与整合、跨境合规，附投决会报告、尽调清单、100 天整合计划等模板）
-- 📍 **完整学习路径**：[`FULL_LEARNING_PATH.md`](./FULL_LEARNING_PATH.md)（8 章，理论→实战→代码→项目）
+- 📍 **完整学习路径**：[`FULL_LEARNING_PATH.md`](./FULL_LEARNING_PATH.md)（10 章，理论→实战→代码→项目）
 - 🌟 **全网精选资源(2026)**：[`TOP_RESOURCES_2026.md`](./TOP_RESOURCES_2026.md)（课程/书/数据/大师/AI）
 - 🤖 **AI 投研手册**：[`docs/ai_finance_playbook.md`](./docs/ai_finance_playbook.md)
 - 📋 **基金实务模板**：[`docs/`](./docs)（设立清单 / PPM / 合伙协议）
-- 🛠️ **可运行脚本**：[`scripts/`](./scripts)（筛选 / 组合优化 / 募集跟踪 / 退出模拟 / 资本预算）
+- 🛠️ **可运行脚本**：[`scripts/`](./scripts)（筛选 / 组合优化 / 募集跟踪 / 退出模拟 / 资本预算 / 回测可信度）
 - ✅ **单元测试**：[`tests/`](./tests)（`pytest`，覆盖脚本核心逻辑与降级路径）
 - 🔧 **自动化 CI**：[`.github/workflows/backtest.yml`](./.github/workflows/backtest.yml)（test + smoke 两段式）
 
@@ -22,7 +23,7 @@
 | # | 项目 | 简介 | 链接 |
 |---|------|------|------|
 | 1 | awesome-quant | 量化总索引（库/数据/书单） | https://github.com/wilsonfreitas/awesome-quant |
-| 2 | OpenBB Terminal | 开源投研终端 | https://github.com/OpenBB-finance/OpenBB |
+| 2 | OpenBB | 开源金融数据平台（Python / Excel / MCP / REST API） | https://github.com/OpenBB-finance/OpenBB |
 | 3 | Machine Learning for Trading | 算法交易 ML 代码 | https://github.com/stefan-jansen/machine-learning-for-trading |
 | 4 | financial-machine-learning | 金融 ML 案例集 | https://github.com/firmai/financial-machine-learning |
 | 5 | pybroker | ML 算法交易框架 | https://github.com/edtechre/pybroker |
@@ -33,6 +34,8 @@
 | 10 | FinanceToolkit | 财务+估值工具 | https://github.com/JerBouma/FinanceToolkit |
 | 11 | mplfinance | K线图表 | https://github.com/matplotlib/mplfinance |
 | 12 | Qlib | 微软 AI 量化平台（因子/模型/回测，支持 A 股） | https://github.com/microsoft/qlib |
+| 13 | skfolio | scikit-learn 风格的组合优化，内置交叉验证防过拟合 | https://github.com/skfolio/skfolio |
+| 14 | vectorbt | 向量化回测，批量比较参数组合 | https://github.com/polakowo/vectorbt |
 
 > 更多课程/书单/数据/大师资源见 [`TOP_RESOURCES_2026.md`](./TOP_RESOURCES_2026.md)。
 
@@ -40,15 +43,19 @@
 ```
 invest-study/
 ├─ README.md                     # 本文件：导航 + 资源总览
-├─ FULL_LEARNING_PATH.md        # 完整学习路径（8 章）
+├─ FULL_LEARNING_PATH.md        # 完整学习路径（10 章）
 ├─ TOP_RESOURCES_2026.md        # 全网精选资源（2026）
+├─ EVIDENCE_2026.md             # 投资证据与研究纪律（2026）
+├─ corporate-investment/        # 企业投资模块（五章 + 模板）
 ├─ requirements.txt             # 完整学习环境依赖
 ├─ requirements-ci.txt          # CI 冒烟测试最小依赖
 ├─ scripts/                     # 可运行脚本（结果输出到 reports/）
 │  ├─ sector_screening.py       # 赛道/因子筛选
 │  ├─ optimize_portfolio.py     # 组合优化（最小波动/最大夏普）
 │  ├─ fund_raise_tracker.py     # 募集进度跟踪(xlsx)
-│  └─ exit_simulation.py        # 退出/并购溢价 IRR 模拟
+│  ├─ exit_simulation.py        # 退出/并购溢价 IRR 模拟
+│  ├─ capital_budgeting.py      # 项目投资评估（NPV/IRR/情景/敏感性）
+│  └─ backtest_stats.py         # 回测可信度（PSR / 折减夏普比率 DSR）
 ├─ tests/                       # pytest 单元测试（覆盖降级路径）
 ├─ docs/                        # 模板与手册
 │  ├─ fund_setup_checklist.md
@@ -61,7 +68,8 @@ invest-study/
 │  ├─ 02_factor_backtest_lookahead.ipynb   # 动量因子回测与前视偏差
 │  ├─ 03_portfolio_risk.ipynb              # 组合优化、风险贡献、VaR/CVaR
 │  ├─ 04_options_pricing.ipynb             # Black-Scholes、希腊字母、蒙特卡洛定价
-│  └─ 05_ma_valuation.ipynb                # 并购估值：DCF、协同效应定价、商誉减值
+│  ├─ 05_ma_valuation.ipynb                # 并购估值：DCF、协同效应定价、商誉减值
+│  └─ 06_backtest_overfitting.ipynb        # 回测过拟合：选择偏差与折减夏普比率
 ├─ data/  reports/                   # 数据与输出目录
 ```
 
@@ -73,9 +81,10 @@ python scripts/optimize_portfolio.py    # 跑组合优化 → reports/portfolio_
 python scripts/fund_raise_tracker.py    # 生成募集跟踪表 → reports/fund_raise_tracker.xlsx
 python scripts/exit_simulation.py       # 退出溢价 IRR 模拟 → reports/exit_simulation.csv
 python scripts/capital_budgeting.py     # 项目投资评估（NPV/IRR/回收期/情景/敏感性）→ reports/capital_budgeting.csv
+python scripts/backtest_stats.py        # 回测可信度：复现折减夏普比率论文的数值例子 → reports/backtest_stats.csv
 ```
 
-**练习 Notebook**（离线可运行）：`jupyter lab notebooks/`，按 01 → 05 的顺序做（05 为企业并购估值）。第 2 个用纯随机数据演示**前视偏差**：信号没有滞后时，毫无规律的数据也能回测出年化 60% 以上、夏普 6 的“策略”。
+**练习 Notebook**（离线可运行）：`jupyter lab notebooks/`，按 01 → 06 的顺序做（05 为企业并购估值）。第 2 个用纯随机数据演示**前视偏差**：信号没有滞后时，毫无规律的数据也能回测出年化 60% 以上、夏普 6 的“策略”。第 6 个演示**选择偏差**：200 个毫无预测能力的策略里，样本内最好的那个年化夏普 1.4，如实计入 200 次试验后，折减夏普比率只有 0.39。
 
 > 所有脚本在无网络 / 缺少可选依赖时会自动降级为内置示例数据，保证流程可跑通。
 > 行业筛选的实盘数据来自东方财富行业板块接口，通常只在国内网络可访问；设置 `INVEST_OFFLINE=1` 可直接用示例数据。

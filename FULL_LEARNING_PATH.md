@@ -1,6 +1,8 @@
 # 投资全链路学习路径（从理论到实战）· 2026 增强版
 
 > 由交易分析团队维护。相比初版，本次增强：新增 AI/LLM 投研章节、扩充开源项目与中文资源、补齐可运行脚本与基金实务模板（见仓库 `scripts/`、`docs/`）。
+>
+> 2026-10-27 更新：新增 4.6「回测可信度」（折减夏普比率脚本 + 06 号练习）和 [投资证据与研究纪律](EVIDENCE_2026.md)；更新组合优化与回测工具（Backtrader 自 2023 年、原版 Zipline 自 2020 年起不再更新）。
 
 ## 🎯 目标
 - 掌握基金业务全流程：从设立、募集、投资、投后管理到清算退出
@@ -13,11 +15,11 @@
 
 | 章节 | 关键概念 | 推荐资源 |
 |------|----------|----------|
-| 1.1 金融基础 | 资产类别、风险收益、时间价值、CAPM | 《Investopedia》《金融学（第七版）》 |
-| 1.2 私募/公募基金制度 | 基金设立流程、监管要求 | 《私募基金实务》证监会官方文档 |
+| 1.1 金融基础 | 资产类别、风险收益、时间价值、CAPM | Investopedia 词条、[CFA Investment Foundations](https://www.cfainstitute.org/programs/investment-foundations-certificate)（免费） |
+| 1.2 私募/公募基金制度 | 基金设立流程、监管要求 | [《私募投资基金监督管理条例》](https://www.gov.cn/zhengce/zhengceku/202307/content_6890739.htm)、[中国证券投资基金业协会](https://www.amac.org.cn/)自律规则与基金从业资格考试教材；公募费率与业绩比较基准新规见 `TOP_RESOURCES_2026.md` 第十节 |
 | 1.3 行业赛道模型 | 波特五力、PESTEL、产业链价值结构 | 《波特竞争战略》《麦肯锡行业洞察》 |
 | 1.4 投资决策框架 | 4C/5C、DCF、相对估值、PE/EV、竞争壁垒 | 《公司理财（第11版）》《估值》Aswath Damodaran |
-| 1.5 市场微观与有效市场 | 随机游走、行为金融、套利限制 | 《漫步华尔街》《思考，快与慢》 |
+| 1.5 市场微观与有效市场 | 随机游走、行为金融、套利限制 | 《漫步华尔街》《思考，快与慢》；主动与被动基金的长期证据见 [EVIDENCE_2026.md](EVIDENCE_2026.md) |
 
 ### 学习建议
 - 每章阅读 30‑45 分钟，随后用 10‑15 分钟把概念写成 **One‑Pager**（Markdown），放入 `reports/`。
@@ -70,10 +72,11 @@ cands = df[(df["pe"] > 0) & (df["pe"] < 20)]               # 剔除亏损股，P
 | 步骤 | 说明 | 参考实现 |
 |------|------|----------|
 | 4.1 因子模型构建 | 价值、规模、动量、质量因子 | `edtechre/pybroker` 示例 |
-| 4.2 资产配置优化 | 均值‑方差、风险平价、黑利特 | `pyportfolioopt` |
-| 4.3 组合回测 | Backtrader、Zipline、bt、vectorbt | `scripts/optimize_portfolio.py`（已提供） |
+| 4.2 资产配置优化 | 均值‑方差、风险平价、Black-Litterman | `pyportfolioopt` / `skfolio`（可做交叉验证）/ `Riskfolio-Lib` |
+| 4.3 组合回测 | bt、vectorbt、zipline-reloaded（Backtrader、原版 Zipline 已多年不更新，老教程仍可参考） | `scripts/optimize_portfolio.py`（已提供） |
 | 4.4 风险监控 | VaR、最大回撤、行业敞口 | quantstats / ffn |
 | 4.5 投后报告 | 周报、月报、投资回报分析 | 练习产出：`reports/portfolio_report_template.md`（自建） |
+| 4.6 回测可信度 | 试验次数与选择偏差、折减夏普比率（DSR）、样本外检验、因子复现证据 | `scripts/backtest_stats.py`、`notebooks/06_backtest_overfitting.ipynb`、[EVIDENCE_2026.md](EVIDENCE_2026.md) |
 
 **示例：使用 `pyportfolioopt` 进行最小波动率组合**
 ```python
@@ -101,7 +104,7 @@ print(ef.clean_weights())
 
 ### 6.1 代码仓库（精选，详见 README.md 与 awesome-quant）
 - `wilsonfreitas/awesome-quant`（总索引）
-- `OpenBB-finance/OpenBB`（开源投研终端）
+- `OpenBB-finance/OpenBB`（开源金融数据平台）
 - `stefan-jansen/machine-learning-for-trading`
 - `firmai/financial-machine-learning`
 - `edtechre/pybroker`
@@ -111,6 +114,7 @@ print(ef.clean_weights())
 - `JerBouma/FinanceToolkit`
 - `matplotlib/mplfinance`
 - `microsoft/qlib`（AI 量化平台，支持 A 股）
+- `skfolio/skfolio`（组合优化 + 交叉验证）/ `polakowo/vectorbt`（向量化回测）
 
 ### 6.2 经典书籍（扩充）
 | 书名 | 作者 | 适用阶段 |
@@ -170,8 +174,8 @@ print(ef.clean_weights())
 
 ### 6.7 🤖 AI / LLM 投研新风（2026 新增）
 - 用法与工程要点见 `docs/ai_finance_playbook.md`
-- 金融 LLM 评测：https://www.azilen.com/learning/best-llms-for-financial-analysis/
-- AI 投研工具：https://www.alpha-sense.com/resources/research-articles/ai-tools-for-financial-research/
+- 金融智能体评测：Vals AI Finance Agent 基准 https://www.vals.ai/benchmarks/finance_agent 、FinanceBench https://arxiv.org/abs/2311.11944
+- 大模型回测的前视偏差：https://arxiv.org/abs/2309.17322 （证据汇总见 [EVIDENCE_2026.md](EVIDENCE_2026.md) 第三节）
 - FinBERT 情绪模型：https://github.com/ProsusAI/finbert
 
 ## 7️⃣ 项目练习路线（12 周）
@@ -181,7 +185,7 @@ print(ef.clean_weights())
 | 1‑2 | 金融基础 & 基金设立 | 读《私募基金实务》1‑3章，写《基金设立检查清单》 |
 | 3‑4 | 行业赛道模型 | 用 AkShare 抓一个行业板块（如“汽车整车”“半导体”）的成分股数据，写行业报告 |
 | 5‑6 | 标的筛选实战 | 运行 `scripts/sector_screening.py`，筛 5 只 A 股 |
-| 7‑8 | 组合构建与回测 | 用 `pyportfolioopt` 生成最小波动组合；回测 1 年 |
+| 7‑8 | 组合构建与回测 | 用 `pyportfolioopt` 生成最小波动组合；回测 1 年；记下试过的参数组合数，用 `scripts/backtest_stats.py` 算 DSR |
 | 9‑10| 投后监控 | 用 quantstats 监控最大回撤、行业敞口 |
 | 11‑12| 项目汇总 | 统一 Notebook/脚本/报告，PR 提交，CI 自动生成报告 |
 
@@ -228,17 +232,19 @@ print(ef.clean_weights())
 ## 📂 项目结构（更新后）
 ```
 invest-study/
-├─ README.md / FULL_LEARNING_PATH.md / TOP_RESOURCES_2026.md / requirements.txt
-├─ scripts/   (sector_screening / optimize_portfolio / fund_raise_tracker)
+├─ README.md / FULL_LEARNING_PATH.md / TOP_RESOURCES_2026.md / EVIDENCE_2026.md / requirements.txt
+├─ scripts/   (sector_screening / optimize_portfolio / fund_raise_tracker / exit_simulation / capital_budgeting / backtest_stats)
+├─ corporate-investment/（企业投资五章 + 模板）
 ├─ docs/      (fund_setup_checklist / PPM_template / partnership_agreement / ai_finance_playbook)
 ├─ .github/workflows/backtest.yml
-└─ notebooks/（5 个练习）data/ reports/
+└─ notebooks/（6 个练习）data/ reports/
 ```
 
 ## ✅ 接下来可以做的事
 1. 克隆仓库，安装依赖：`pip install -r requirements.txt`
-2. 运行 `python scripts/sector_screening.py` 验证筛选流程，再按顺序做 `notebooks/` 里的 4 个练习（数据与可视化 → 因子回测与前视偏差 → 组合优化与风险 → 期权定价）；风险管理、衍生品和 A 股制度的官方资料见 `TOP_RESOURCES_2026.md` 第九、十节
-3. 阅读 `docs/ai_finance_playbook.md` 了解 AI 投研落地
-4. 提交练习 Notebook / 报告，触发 CI 自动回测
+2. 运行 `python scripts/sector_screening.py` 验证筛选流程，再按顺序做 `notebooks/` 里的 6 个练习（数据与可视化 → 因子回测与前视偏差 → 组合优化与风险 → 期权定价 → 并购估值 → 回测过拟合）；风险管理、衍生品和 A 股制度的官方资料见 `TOP_RESOURCES_2026.md` 第九、十节
+3. 读 [投资证据与研究纪律](EVIDENCE_2026.md)，用文末的八个问题检查自己的回测
+4. 阅读 `docs/ai_finance_playbook.md` 了解 AI 投研落地
+5. 提交练习 Notebook / 报告，触发 CI 自动回测
 
 ⚠️ 本仓库为学习/培训用途，所有内容不构成投资建议。
