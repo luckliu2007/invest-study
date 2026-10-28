@@ -57,4 +57,6 @@
 7. 收益是不是来自没说清楚的风险，例如杠杆、尾部风险或流动性风险？
 8. 如果结论由 AI 生成，关键数字回查原文了吗？智能体能不能自己下单，权限和限额是什么？（见 [AI 投研手册](docs/ai_finance_playbook.md)）
 
+> 通用的 AI 应用最佳实践（评估、智能体分级授权、合规）见 [2026 AI 最佳实践](https://github.com/luckliu2007/ai-ml-data-roadmap/blob/main/best-practices-2026.md)。
+>
 > 本页为学习资料，不构成投资建议。
