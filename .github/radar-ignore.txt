@@ -18,3 +18,4 @@ YichengYang-Ethan/oracle3-prediction-market-agent
 jianweiweng05/qsx-strategy-score
 oficcejo/aiagents-stock
 chen-zeong/DTV
+hotyue/IP-Sentinel
