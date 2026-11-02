@@ -142,6 +142,7 @@
 | 《公开募集证券投资基金销售费用管理规定》 | 2026-01-01 起施行，费率改革最后一步：调降认申购费和销售服务费，赎回费全部计入基金财产，持有超过一年的份额（货币基金除外）不再收销售服务费 | https://www.csrc.gov.cn/csrc/c100028/c7606047/content.shtml |
 | 《公开募集证券投资基金业绩比较基准指引》 | 2026-03-01 起施行：基准与投资风格匹配、一经选定不得随意变更，用来识别“风格漂移” | https://www.csrc.gov.cn/csrc/c100028/c7610827/content.shtml |
 | 《公开募集证券投资基金运作管理办法》修订（征求意见稿） | 2026-10-09 公开征求意见，截至 2026-11-08：行业主题基金名实相符、混合基金明确资产配置比例、“迷你基金”固定费用由管理人承担并建立强制退出机制、权益类基金成立门槛降到 5000 万元；通知页附征求意见稿全文和修订说明 | https://www.csrc.gov.cn/csrc/c101981/c7663407/content.shtml |
+| 《关于全面实施个人养老金制度的通知》（人社部发〔2024〕87 号） | 人社部、财政部、税务总局、金融监管总局、证监会联合印发，2024-12-15 起全国实施：参加基本养老保险的劳动者均可开户，税收优惠扩大到全国；国债、特定养老储蓄、指数基金纳入产品范围；鼓励金融机构探索默认投资服务；新增重大疾病、领取失业保险金等提前领取情形。原文见国家税务总局法规库 | https://fgk.chinatax.gov.cn/zcfgk/c100013/c5236500/content.html |
 
 ## 十一、🏢 企业投资（企业视角）
 
@@ -168,6 +169,7 @@
 | AQR 数据集 | AQR 公开并定期更新的因子数据：质量（QMJ）、低贝塔（BAB）、价值与动量等，覆盖美国和 23 个国际股票市场 | https://www.aqr.com/Insights/Datasets |
 | 《The Deflated Sharpe Ratio》 | Bailey、López de Prado：给多次试验后挑出的回测打折；本仓库 `scripts/backtest_stats.py` 复现了论文数值 | https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf |
 | 《…and the Cross-Section of Expected Returns》 | Harvey、Liu、Zhu：新因子的 t 值应超过 3.0 | https://www.nber.org/papers/w20592 |
+| Vanguard《The rebalancing edge》（2024-12） | 比较按月、按季和阈值再平衡：60/40 组合在 2020 年 3 月，按月再平衡最多偏离目标约 7%、按季约 10%，200/175 阈值法（偏离 2 个百分点触发、调回 1.75 个百分点）始终在约 2% 以内；对目标日期基金投资者，阈值法相比按月每年预期多 15–25 个基点、相比按季多 5–10 个基点（主要来自交易成本更低） | https://corporate.vanguard.com/content/dam/corp/research/pdf/the_rebalancing_edge_optimizing_target_date_fund_rebalancing_through_threshold_based_strategies.pdf |
 | Bogleheads Wiki | 指数化投资与资产配置的社区百科：低成本、分散、长期持有的完整方法 | https://www.bogleheads.org/wiki/Main_Page |
 
 ---

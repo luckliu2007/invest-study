@@ -18,12 +18,16 @@
 - [x] `docs/enneagram_learning_guide.md` 与投研主题无关，已迁出到所有者的私有仓库（2026-10-21）
 - [x] 回测可信度与投资证据：`EVIDENCE_2026.md`、`scripts/backtest_stats.py`、`notebooks/06_backtest_overfitting.ipynb`（2026-10-27）
 - [ ] 固定收益与利率：久期、凸性、收益率曲线的离线练习 Notebook
-- [ ] 个人资产配置：个人养老金制度、目标日期基金、再平衡规则（以官方原文为准）
+- [ ] 个人资产配置：个人养老金制度、目标日期基金、再平衡规则（以官方原文为准）（2026-11-02 已补个人养老金全面实施通知、Vanguard 阈值再平衡研究；目标日期基金的中国监管原文待补）
 
 ## 2026-10-23 企业投资模块（已完成）
 
 - 新增 `corporate-investment/`：资本配置与项目评估、投资流程与投决会、CVC 与产业基金、并购与整合、跨境合规五章，附投决会报告、尽调清单、100 天整合计划、投后复盘四个模板和中国法规速查表
 - 新增 `scripts/capital_budgeting.py`（含 11 项单元测试）与 `notebooks/05_ma_valuation.ipynb`
+
+## 2026-11-02 更新（已完成）
+
+- `TOP_RESOURCES_2026.md` 第十节新增《关于全面实施个人养老金制度的通知》（人社部发〔2024〕87 号）原文；第十二节新增 Vanguard《The rebalancing edge》（2024-12）阈值再平衡研究。
 
 ## 2026-10-30 更新（已完成）
 
