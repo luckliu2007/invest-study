@@ -28,6 +28,7 @@
 | AKQuant | AKShare 团队出品的回测/交易框架：Rust 内核 + Python 接口，内置滚动训练(Walk-forward) | https://github.com/akfamily/akquant |
 | 看海量化 OSkhQuant | A 股量化回测 Windows 桌面软件（开源版）：免开户、免 QMT，BaoStock/Tushare 数据存本地 DuckDB，Python 写策略一键出回测报告；CC BY-NC 4.0（非商用），商业版另售 | https://github.com/khscience/OSkhQuant |
 | TSP 量化工作台 tick-stock-panel | A 股自托管量化工作台（个人开源，MIT）：策略 / 因子 / 回测（含 T+1、费用、滑点）/ 盘中异动监控一体，Docker 单容器、数据存本地 Parquet，附 Open API 与 MCP；数据源插件化（已接 TickFlow、同花顺 fuyao、通达信 TdxQuant 等）；作者声明不做 AI 荐股、仅供学习研究，README 含赞助商与推荐码链接 | https://github.com/shy3130/tick-stock-panel |
+| XQuant：人人都是量化交易员 xquant-beginner | 零基础量化自学开源书（中文）：用 AI 编程工具 + Python 从策略规格（spec）写到回测、基准对比与风险评估，专设一章讲过拟合与数据泄露（参数网格、样本内外、前推分析），末章入门因子研究；配套 notebook 在 xquant-learning 仓库。作者刑无刀（《推荐系统》作者）；书稿 CC BY-NC-SA 4.0，README 注明最新版书稿与视频课在作者的付费站点 | https://github.com/xingwudao/xquant-beginner |
 
 ## 二、📚 经典书单（入门→进阶）
 **价值/基本面**
