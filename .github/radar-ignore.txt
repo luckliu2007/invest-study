@@ -19,3 +19,4 @@ jianweiweng05/qsx-strategy-score
 oficcejo/aiagents-stock
 chen-zeong/DTV
 hotyue/IP-Sentinel
+larashero3-dotcom/lieflat-gongwen
