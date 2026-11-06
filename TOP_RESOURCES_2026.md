@@ -169,7 +169,7 @@
 | AQR 数据集 | AQR 公开并定期更新的因子数据：质量（QMJ）、低贝塔（BAB）、价值与动量等，覆盖美国和 23 个国际股票市场 | https://www.aqr.com/Insights/Datasets |
 | 《The Deflated Sharpe Ratio》 | Bailey、López de Prado：给多次试验后挑出的回测打折；本仓库 `scripts/backtest_stats.py` 复现了论文数值 | https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf |
 | 《…and the Cross-Section of Expected Returns》 | Harvey、Liu、Zhu：新因子的 t 值应超过 3.0 | https://www.nber.org/papers/w20592 |
-| Vanguard《The rebalancing edge》（2024-12） | 比较按月、按季和阈值再平衡：60/40 组合在 2020 年 3 月，按月再平衡最多偏离目标约 7%、按季约 10%，200/175 阈值法（偏离 2 个百分点触发、调回 1.75 个百分点）始终在约 2% 以内；对目标日期基金投资者，阈值法相比按月每年预期多 15–25 个基点、相比按季多 5–10 个基点（主要来自交易成本更低） | https://corporate.vanguard.com/content/dam/corp/research/pdf/the_rebalancing_edge_optimizing_target_date_fund_rebalancing_through_threshold_based_strategies.pdf |
+| Vanguard《The rebalancing edge》（2024-12） | 比较按月、按季和阈值再平衡：60/40 组合在 2020 年 3 月，按月再平衡最多偏离目标约 7%、按季约 10%，200/175 阈值法（股票占比偏离目标 2 个百分点时触发，调回到距目标 1.75 个百分点处）始终在约 2% 以内；对目标日期基金投资者，阈值法相比按月每年预期多 15–25 个基点、相比按季多 5–10 个基点（主要来自交易成本更低） | https://corporate.vanguard.com/content/dam/corp/research/pdf/the_rebalancing_edge_optimizing_target_date_fund_rebalancing_through_threshold_based_strategies.pdf |
 | Bogleheads Wiki | 指数化投资与资产配置的社区百科：低成本、分散、长期持有的完整方法 | https://www.bogleheads.org/wiki/Main_Page |
 
 ---
