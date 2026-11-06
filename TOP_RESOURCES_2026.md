@@ -105,6 +105,7 @@
 - TradingAgents 多智能体交易研究框架：https://github.com/TauricResearch/TradingAgents
 - TradingAgents-astock（TradingAgents 的 A 股特化 fork：A 股数据源、T+1/涨跌停规则，新增政策/游资/解禁分析师，面向研究与教学）：https://github.com/simonlin1212/TradingAgents-astock
 - daily_stock_analysis LLM 自选股每日分析与推送（A股/港股/美股等，GitHub Actions 定时运行，含回测；README 含赞助商推广链接）：https://github.com/ZhuLinsen/daily_stock_analysis
+- XQuant《人人都是量化交易员》开源书（刑无刀等著，零基础用 AI 编程工具 + Python 学量化：9 章从选标的、仓位、交易规则到回测评估、过拟合检查、执行与因子研究入门，配套 spec 与 notebook 在 xingwudao/xquant-learning；书稿 CC BY-NC-SA 4.0；README 含付费视频课、组合商店和读者群推广，作者称最新版书稿在其付费站点）：https://github.com/xingwudao/xquant-beginner
 - ai-hedge-fund 多智能体投资分析教学项目：https://github.com/virattt/ai-hedge-fund
 - FinGPT 开源金融大模型：https://github.com/AI4Finance-Foundation/FinGPT
 - RD-Agent 自动化因子/模型研发（配合 Qlib）：https://github.com/microsoft/RD-Agent
