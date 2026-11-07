@@ -21,6 +21,7 @@
 | Qlib | 微软 AI 量化平台：因子挖掘→模型→回测，支持 A 股 | https://github.com/microsoft/qlib |
 | skfolio | 基于 scikit-learn 接口的组合优化与风险管理库：可以像机器学习模型一样做交叉验证，内置滚动（Walk Forward）和组合清洗交叉验证（CPCV），适合检验配置方案会不会过拟合（BSD-3） | https://github.com/skfolio/skfolio |
 | Riskfolio-Lib | 组合优化库：均值-风险框架下 26 种凸风险度量（CVaR、回撤类等）、风险平价、层次聚类配置（BSD-3） | https://github.com/dcajasn/Riskfolio-Lib |
+| NVIDIA 组合优化蓝图 portfolio-optimization | NVIDIA 官方参考实现：用 GPU 做均值-CVaR、均值-方差组合优化（cuOpt 求解器）和情景生成（RAPIDS cuML），附再平衡回测和 Jupyter 示例；需要 Linux + CUDA，官方推荐 H100 级 GPU，README 中的加速倍数为官方自报（Apache-2.0） | https://github.com/NVIDIA-AI-Blueprints/portfolio-optimization |
 | vectorbt | 向量化回测：几行代码就能比较成千上万个参数组合。试得越多越要用 DSR 打折（见 `notebooks/06_backtest_overfitting.ipynb`）；这是开源社区版，另有功能更多的 PRO 版 | https://github.com/polakowo/vectorbt |
 | NautilusTrader | Rust 内核的事件驱动交易引擎：研究、确定性回测和实盘用同一套架构，Python 写策略（LGPL-3.0） | https://github.com/nautechsystems/nautilus_trader |
 | arch | 金融计量：GARCH 类波动率模型，以及检验“挑出来的最好策略是不是运气”的多重比较检验（SPA、StepM、MCS） | https://github.com/bashtage/arch |
