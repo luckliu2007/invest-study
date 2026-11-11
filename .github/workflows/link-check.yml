@@ -14,6 +14,9 @@ on:
     - cron: '17 2 * * 1'   # 每周一 02:17 UTC（避开整点）
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   link-check:
     runs-on: ubuntu-latest

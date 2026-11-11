@@ -1,0 +1,24 @@
+name: 🔗 报告失效链接
+description: 某个资源链接打不开、跳到了别的页面，或内容已下线
+title: "[失效链接] "
+labels: ["bug"]
+body:
+  - type: input
+    id: file
+    attributes:
+      label: 所在文件
+      placeholder: 例如：TOP_RESOURCES_2026.md
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: 失效的链接
+      placeholder: https://example.com
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: 具体情况
+      description: 是完全打不开、跳转到别的页面，还是变成付费了？如果知道新地址，欢迎一并提供。

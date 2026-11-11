@@ -1,0 +1,55 @@
+name: 📚 推荐资源
+description: 推荐一个值得收录的投资研究、量化或企业投资学习资源
+title: "[资源推荐] "
+labels: ["enhancement"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: 资源名称
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: 链接
+      placeholder: https://
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: 放在资源总表的哪一节
+      options:
+        - 一、开源项目
+        - 二、书单
+        - 三、课程
+        - 四、数据来源
+        - 五、大师公开资源
+        - 六、博客 / 资讯 / 播客
+        - 七、AI / LLM 投研
+        - 八、论文与研究
+        - 九、风险管理与衍生品
+        - 十、A 股市场制度（官方原文）
+        - 十一、企业投资
+        - 十二、投资证据与研究方法
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: 推荐理由
+      description: 解决什么问题、适合什么水平、为什么比已收录的同类更值得收录。收录标准见 CONTRIBUTING.md。
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 确认
+      options:
+        - label: 我搜过本仓库，没有重复收录
+          required: true
+        - label: 我自己打开过这个资源，内容不是空壳或纯营销
+          required: true
+        - label: 不是荐股、带单、加密代币推广或付费社群引流；有付费推广的，会在推荐理由里写明
+          required: true
