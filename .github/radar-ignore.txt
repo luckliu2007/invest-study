@@ -20,3 +20,4 @@ oficcejo/aiagents-stock
 chen-zeong/DTV
 hotyue/IP-Sentinel
 larashero3-dotcom/lieflat-gongwen
+NVIDIA-AI-Blueprints/portfolio-optimization
