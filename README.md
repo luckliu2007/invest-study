@@ -8,6 +8,8 @@
 > 投资研究 / 量化 / 基金实务 / **企业投资**的**系统性自学与团队培训仓库**。
 > 由交易分析团队基于公开资料持续维护，融合基本面、技术面、量化与 AI 投研新风。
 
+> **English**: A Chinese-language self-study and training repo for investment research, quant, AI-assisted research and corporate investment — learning paths, curated resources (regulations from official sources), an evidence page with dated primary sources, offline notebooks and tested Python scripts. Educational only; not investment advice.
+
 ## 🧭 快速导航
 - 🔬 **投资证据与研究纪律（2026）**：[`EVIDENCE_2026.md`](./EVIDENCE_2026.md)（主动与被动基金的长期对比、投资者的买卖时点损失、因子复现、回测过拟合、AI 投研评测；附十条研究纪律和八个检查问题）
 - 🏢 **企业投资模块**：[`corporate-investment/`](./corporate-investment)（资本配置与项目评估、投决会与治理、CVC 与产业基金、并购与整合、跨境合规，附投决会报告、尽调清单、100 天整合计划等模板）
@@ -101,7 +103,8 @@ pytest                                   # 运行全部单元测试
 下一步的补强方向和维护机制见 [ROADMAP.md](ROADMAP.md)。
 
 ## 🤝 贡献
-欢迎 PR 补充资源、修正链接、提交练习 Notebook。
+
+欢迎补充资源、修正链接、提交练习 Notebook。用 Issue 表单最快：[推荐资源](https://github.com/luckliu2007/invest-study/issues/new?template=resource-suggestion.yml)、[报告失效链接](https://github.com/luckliu2007/invest-study/issues/new?template=broken-link.yml)、[内容勘误](https://github.com/luckliu2007/invest-study/issues/new?template=content-error.yml)、[脚本或 Notebook 报错](https://github.com/luckliu2007/invest-study/issues/new?template=script-bug.yml)；也可以直接发 PR。收录标准和代码要求见 [贡献指南](CONTRIBUTING.md)，参与前请读 [行为准则](CODE_OF_CONDUCT.md)。
 
 ---
 ⚠️ 本仓库为学习/培训用途，所有内容不构成投资建议。

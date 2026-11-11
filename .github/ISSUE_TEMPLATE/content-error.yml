@@ -1,0 +1,35 @@
+name: ✏️ 内容勘误
+description: 数字、日期、法规条文、研究结论或描述有误
+title: "[勘误] "
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: 本仓库的法规条文、研究和报告数字一律以原文为准。请附上原文链接，维护者核对后修正。
+  - type: input
+    id: file
+    attributes:
+      label: 所在文件
+      placeholder: 例如：EVIDENCE_2026.md
+    validations:
+      required: true
+  - type: textarea
+    id: wrong
+    attributes:
+      label: 哪里有误
+      description: 直接粘贴有误的那句话。
+    validations:
+      required: true
+  - type: textarea
+    id: correct
+    attributes:
+      label: 正确内容
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: 原文链接
+      description: 官方原文、论文或报告的链接；二手转述请说明出处。
+    validations:
+      required: true

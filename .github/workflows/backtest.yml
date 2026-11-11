@@ -22,6 +22,9 @@ on:
       - 'requirements-test.txt'
       - '.github/workflows/backtest.yml'
 
+permissions:
+  contents: read
+
 jobs:
   # 快速单元测试：只装轻量依赖，必须通过。覆盖脚本核心逻辑与降级路径。
   test:
