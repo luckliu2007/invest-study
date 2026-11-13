@@ -70,6 +70,7 @@
 - **另类**：finagg(聚合多免费API)
 - **给 AI 编程助手用**：a-stock-data（A 股全栈数据 Skill 文件，聚合 34 个免费数据源：行情、研报、资金面、公告、宏观利率、期货、可转债等）：https://github.com/simonlin1212/a-stock-data
 - **本地 A 股数据湖**：CNEquity（免注册、免 token，把行情/财报/资金面/公告/宏观等 55 个数据集增量采集为本地 Parquet，带质量审计与 PIT 语义，可经 MCP 接给 AI 助手；数据来自东财、新浪、BaoStock 等公开源，覆盖以其数据集目录为准）：https://github.com/rootSunc/CNEquity
+- **同花顺官方数据接口**：Financial-API（同花顺官方维护，官网文档指向该仓库；A 股行情与历史 K 线、财报与估值、指数板块、公募基金、公开期货期权，提供 REST API、MCP、CLI、Python SDK 和本地 DuckDB；需在官网申请 API Key，额度与收费以官网为准；公开接口不含分钟 K、tick、Level-2 和港美股行情；仓库代码 MIT）：https://github.com/Hithink-Tech-Org/Financial-API
 - **因子研究**：Kenneth French Data Library（Fama-French 因子与组合收益的权威免费数据，做因子回测的基准）：https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html
 - **研报/公告**：交易所官网、巨潮资讯（证监会指定信息披露网站）：http://www.cninfo.com.cn/ 、公司 IR 页
 - **免费研究专著**：CFA Institute Research Foundation（大量投资研究专著与文献综述可免费下载）：https://rpc.cfainstitute.org/research-foundation
