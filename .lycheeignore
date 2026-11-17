@@ -12,3 +12,5 @@
 ^https?://kjs\.mof\.gov\.cn
 # 商务部“走出去”公共服务平台：海外网络（含 GitHub Actions）常被重置连接，国内可正常访问
 ^https?://fec\.mofcom\.gov\.cn
+# Kenneth French Data Library（达特茅斯 Tuck）：2026-11-16 起对自动化请求整站返回 404，浏览器访问正常（2026-11-17 核对）
+^https://mba\.tuck\.dartmouth\.edu/pages/faculty/ken\.french/
