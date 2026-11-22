@@ -22,3 +22,5 @@ hotyue/IP-Sentinel
 larashero3-dotcom/lieflat-gongwen
 NVIDIA-AI-Blueprints/portfolio-optimization
 Lee-xeo/Claude-Cage
+QuantJourneyOrg/quantjourney-bt
+MemeCalculate/moyin-creator
